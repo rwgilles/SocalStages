@@ -34,6 +34,24 @@ h2{
     font-style: normal;
     color:white;
 }
+h3{
+    font-family: roc-grotesk, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color:white;
+}
+h4{
+    font-family: roc-grotesk, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color:white;
+}
+ul{
+    font-family: roc-grotesk, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color:white;
+}
             
 
 #header{
@@ -94,6 +112,17 @@ h2{
 }
 #margins{
     padding:5%;
+}
+@media screen and (max-width:800px) {
+    
+    #navholder{
+        flex-direction:column;
+        
+    }
+    #header{
+        margin-top:50px;
+        margin-bottom:50px;
+    }
 }
        
     
