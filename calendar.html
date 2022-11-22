@@ -1,1 +1,132 @@
+<html>
+    <head>
+        <title>Calendar</title>
+        <link rel="stylesheet" href="https://use.typekit.net/rix4tuh.css">
+        <link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+        <style>
+            body{
+                color: white;
+                font-family: roc-grotesk, sans-serif;
+            }
+            .week {
+                display: flex;
+                height: 100px;
+                align-content: center;
+            }
+            .month{
+                width: 80%;
+                height: 80%;
+                margin:auto;
+                
+            }
+            .day{
+                border: solid white .5px;
+                flex: 15%;
+                padding: 3px;
+            }
+            .day:hover{
+                background-color: rgb(189, 150, 10);
+                
+            }
+            
+            #spill{
+                opacity: .4;
+            }
+            .pagetitle{
+                text-align: center;
+            }
+            .event{
+                text-align: center;
+            }
 
+
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <div>
+                <img id="logo">
+            </div>
+           
+            <div id="navholder">
+                <a class="navitems" href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/home%20page-acad275.html">Home</a>
+                <a class="navitems"href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/about%20page.html">About</a>
+                <a class="navitems"href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/listen%20page.html">Calendar</a>
+                <a class="navitems"href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/collabs%20page.html">Map</a>
+                <a class="navitems"href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/collabs%20page.html">Submit</a>
+                <a class="navitems"href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/collabs%20page.html">Contact</a>
+            </div>
+        </div>
+        <div class="pagetitle">December</div>
+        <div class="month">
+            <div class="week">
+                <div class="day" id="spill">27</div>
+                <div class="day" id="spill">28</div>
+                <div class="day" id="spill">29</div>
+                <div class="day" id="spill">30</div>
+                <div class="day">1</div>
+                <div class="day">2</div>
+                <div class="day">3<br>
+                    <div class="event">
+                        CUP OF TROY
+                    </div>
+                </div>
+            </div>
+            <div class="week">
+                <div class="day">5</div>
+                <div class="day">6</div>
+                <div class="day">7</div>
+                <div class="day">8</div>
+                <div class="day">9</div>
+                <div class="day">10</div>
+                <div class="day">11</div>
+            </div>
+            <div class="week">
+                <div class="day">12</div>
+                <div class="day">13<br>
+                    <div class="event">
+                        CONQUEST
+                    </div>
+
+                </div>
+                <div class="day">14</div>
+                <div class="day">15</div>
+                <div class="day">16</div>
+                <div class="day">
+                    17 <br>
+                    <div class="event">
+                        SURF HAUS
+                    </div>
+
+                </div>
+                <div class="day">18</div>
+            </div>
+            <div class="week">
+                <div class="day">19</div>
+                <div class="day">20</div>
+                <div class="day">21</div>
+                <div class="day">22</div>
+                <div class="day">23</div>
+                <div class="day">24</div>
+                <div class="day">25<br>
+                    <div class="event">
+                        X-MAS CONCERT
+                    </div>
+                </div>
+            </div>
+            <div class="week">
+                <div class="day">26</div>
+                <div class="day">27</div>
+                <div class="day">28</div>
+                <div class="day">29<br>
+                    <div class="event">
+                        SNOW CLUB
+                    </div>
+                </div>
+                <div class="day">30</div>
+                <div class="day">31</div>
+                <div class="day" id="spill">1</div>
+            </div>
+          </div>
+    </body>
+</html>
