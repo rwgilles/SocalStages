@@ -97,6 +97,10 @@ ul{
     font-style: normal;
     font-size:1.4em;
 }
+.button:hover{
+    background-color:white;
+    color:black;
+}
             
 #footer{
     width: 100%;
@@ -126,7 +130,7 @@ ul{
     .button{
         padding:3%;
         font-size:.8em;
-        width:50%;
+        width:90%;
     }
 }
        
