@@ -11,6 +11,15 @@
         <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
         <style>
+            h1{
+                margin-bottom: -5px;
+                margin-top: 50px;
+            }
+
+            hr{
+                margin-bottom: 25px;
+            }
+
             #landing{
                 height: 100%;
                 width: 100%;
@@ -22,106 +31,197 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                height: 400px;
+                height: 300px;
                 z-index: 3;
             }
 
             .flyer{
-                width: 20%;
+                width: 300px;
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
                 cursor: pointer;
+                margin: auto;
             }
 
-            #flyer-0{
+            .flyer-0{
                 position: absolute;
                 top: 8%;
-                left: 4%;
-                transform: rotate(13deg);
+                left: 8%;
+                transform: rotate(-13deg);
                 z-index: 1;
             }
 
-            #flyer-1{
+            .flyer-1{
                 position: absolute;
                 top: 55%;
-                left: 2%;
+                left: 5%;
                 transform: rotate(-10deg);
-                z-index: 2;
+                z-index: 1;
             }
 
-            #flyer-2{
+            .flyer-2{
                 position: absolute;
-                top: 50%;
-                right: 35%;
+                bottom: 10%;
+                right: 34%;
                 transform: rotate(5deg);
-                z-index: 2;
+                z-index: 1;
             }
 
-            #flyer-3{
+            .flyer-3{
                 position: absolute;
-                top: 25%;
-                left: 70%;
+                top: 15%;
+                right: 14%;
                 transform: rotate(15deg);
             }
 
-            #flyer-4{
+            .flyer-4{
                 position: absolute;
                 top: 5%;
                 right: 5%;
-                transform: rotate(-5deg);
+                transform: rotate(3deg);
                 z-index: -1;
             }
 
-            #flyer-5{
+            .flyer-5{
                 position: absolute;
-                top: 5%;
+                top: 6%;
                 left: 24%;
                 transform: rotate(5deg);
             }
 
-            #flyer-6{
+            .flyer-6{
                 position: absolute;
                 bottom: 7%;
                 right: 18%;
                 transform: rotate(-16deg);
-                z-index: 1;
+                z-index: 2;
             }
 
-            #flyer-7{
+            .flyer-7{
                 position: absolute;
                 top: 5%;
                 left: 40%;
                 transform: rotate(-12deg);
             }
 
-            #flyer-8{
+            .flyer-8{
                 position: absolute;
                 top: 15%;
                 left: 52%;
                 transform: rotate(-1deg);
             }
 
-            #flyer-9{
+            .flyer-9{
                 position: absolute;
-                bottom: 5%;
-                right: 2%;
+                bottom: 15%;
+                right: 7%;
                 transform: rotate(-3deg);
             }
 
-            #flyer-10{
+            .flyer-10{
                 position: absolute;
                 bottom: 10%;
                 left: 28%;
                 transform: rotate(-8deg);
             }
 
-            #flyer-11{
+            .flyer-11{
                 position: absolute;
                 bottom: 11%;
                 left: 15%;
                 transform: rotate(3deg);
+            }
 
+            #flyer-0{
+                position: absolute;
+                top: 10%;
+                left: 34%;
+                transform: rotate(13deg);
+                z-index: 2;
+            }
+
+            #flyer-1{
+                position: absolute;
+                top: 20%;
+                left: 20%;
+                transform: rotate(10deg);
+            }
+
+            #flyer-2{
+                position: absolute;
+                top: 60%;
+                left: 40%;
+                transform: rotate(5deg);
+                z-index: 2;
+            }
+
+            #flyer-3{
+                position: absolute;
+                top: 40%;
+                right: 30%;
+                transform: rotate(15deg);
+            }
+
+            #flyer-4{
+                position: absolute;
+                top: 55%;
+                right: 25%;
+                transform: rotate(3deg);
+                z-index: -1;
+            }
+
+            #flyer-5{
+                position: absolute;
+                top: 8%;
+                right: 18%;
+                transform: rotate(5deg);
+            }
+
+            #flyer-6{
+                position: absolute;
+                top: 55%;
+                left: 27%;
+                transform: rotate(-6deg);
+                z-index: 1;
+            }
+
+            #flyer-7{
+                position: absolute;
+                top: 7%;
+                left: 50%;
+                transform: rotate(-12deg);
+                z-index: 2;
+            }
+
+            #flyer-8{
+                position: absolute;
+                top: 5%;
+                left: 28%;
+                transform: rotate(-1deg);
+            }
+
+            #flyer-9{
+                position: absolute;
+                top: 20%;
+                right: 26%;
+                transform: rotate(-3deg);
+                z-index: 2;
+            }
+
+            #flyer-10{
+                position: absolute;
+                top: 45%;
+                right: 21%;
+                transform: rotate(-8deg);
+                z-index: 2;
+            }
+
+            #flyer-11{
+                position: absolute;
+                top: 40%;
+                left: 22%;
+                transform: rotate(3deg);
             }
 
             #endbar{
@@ -145,6 +245,25 @@
     </head>
 
     <body>
+        <div style="padding: 5% 5% 1% 5%">
+            <div id="header">
+                <div>
+                    <img id="logo">
+                </div>
+               
+                <div id="navholder">
+                    <!--replace the links!!-->
+                    <a class="navitems" href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/home%20page-acad275.html">Home</a>
+                    <a class="navitems"href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/about%20page.html">About</a>
+                    <a class="navitems"href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/listen%20page.html">Calendar</a>
+                    <a class="navitems"href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/collabs%20page.html">Map</a>
+                    <a class="navitems"href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/collabs%20page.html">Submit</a>
+                    <a class="navitems"href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/collabs%20page.html">Contact</a>
+                </div>
+            </div>
+        </div>
+        
+
         <div id="landing">
             <img src="socalstages.png" id="logo-button">
             <img src="flyer-0.png" class="flyer" id="flyer-0" alt="Conquest 2022 - Mura Musa">
@@ -159,17 +278,27 @@
             <img src="flyer-9.jpg" class="flyer" id="flyer-9" alt="Student Showcase">
             <img src="flyer-10.jpg" class="flyer" id="flyer-10" alt="Welcome Back Concert 2022">
             <img src="flyer-11.jpg" class="flyer" id="flyer-11" alt="">
-        </div><br>
+            <br>
+        </div>
 
         <!-- next part: list view -->
-        <div id="list-view" style="padding: 5%; margin-bottom: 5%;">
+        <div id="list-view" style="padding: 0% 5% 5% 5%; margin-bottom: 1%;">
             <div>
-                <h1 style="font-size:60px">UPCOMING CONCERTS ✌︎</h1>
+                <a href="LINK TO LIST VIEW MAP PAGE"><h1 style="font-size:60px">UPCOMING CONCERTS ✌︎</h1></a>
             </div>
             <div>
-                <h1>CONQUEST 2022</h1><hr>
+                <h1>CONQUEST 2022</h1>
+                <p>
+                    <em>Presented by CONSCERTS</em>
+                </p><hr>
                 <img src="flyer-0.png" class="flyer space">
-                <p>INSERT CONCERT INFO</p>
+                <div>
+                    <p>
+                        INSERT CONCERT INFO
+                    </p>
+                    
+                </div>
+                
             </div><br style="clear:both;">
 
             <div>
@@ -180,11 +309,14 @@
                 
             </div><br style="clear:both;">
             
-        </div><br>
+        </div>
 
         <!-- next part: calendar view -->
         <div id="calender-view" style="padding: 5%;">
-            <h1>CALENDER [insert below]</h1><hr>
+            <div>
+                <a href="LINK TO CALENDAR PAGE"><h1 style="font-size:60px">CALENDAR ✌︎</h1></a>
+            </div>
+            <div><p>INSERT CALENDAR</p></div>
         </div>
 
         <!-- end bar -->
@@ -192,37 +324,117 @@
         </div> -->
 
         <script>
-            var hover = function(){
+            var on = function(){
                 // $("#music").trigger("play").prop("volume", 0.6);
     
-                // $("#header").animate({"opacity":1},5000);
+                $("#flyer-0").animate({"left":"20%","top":"10%"},1000);
+                $("#flyer-1").animate({"left":"15%","top":"50%"},1000);
+                $("#flyer-2").animate({"left":"5%","top":"16%"},1000);
+                $("#flyer-3").animate({"left":"54%","top":"47%"},1000);
+                $("#flyer-4").animate({"right":"20%","top":"8%"},1000);
+                $("#flyer-5").animate({"left":"30%","top":"18%"},1000);
+                $("#flyer-6").animate({"left":"2%","top":"48%"},1000);
+                $("#flyer-7").animate({"left":"80%","top":"7%"},1000);
+                $("#flyer-8").animate({"left":"80%","top":"35%"},1000);
+                $("#flyer-9").animate({"left":"70%","top":"52%"},1000);
+                $("#flyer-10").animate({"left":"5%","top":"47%"},1000);
+                $("#flyer-11").animate({"left":"38%","top":"4%"},1000);
+                
+            }
+
+            var off = function(){
+                // $("#music").trigger("play").prop("volume", 0.6);
+                // REVERSE OF HOVER EFFECT BACK TO NORMAL
     
-                $("#flyer-0").animate({"left":"100px","top":"20px"},3000);
-                $("#flyer-1").animate({"left":"100px","top":"20px"},3000);
-                $("#flyer-2").animate({"left":"100px","top":"20px"},3000);
-                $("#flyer-3").animate({"left":"100px","top":"20px"},3000);
-                $("#flyer-4").animate({"left":"100px","top":"20px"},3000);
-                $("#flyer-5").animate({"left":"100px","top":"20px"},3000);
-                $("#flyer-6").animate({"left":"100px","top":"20px"},3000);
-                $("#flyer-7").animate({"left":"100px","top":"20px"},3000);
-                $("#flyer-8").animate({"left":"100px","top":"20px"},3000);
-                $("#flyer-9").animate({"left":"100px","top":"20px"},3000);
-                $("#flyer-10").animate({"left":"100px","top":"20px"},3000);
+                $("#flyer-0").animate({"left":"34%","top":"10%"},1000);
+                $("#flyer-1").animate({"left":"20%","top":"20%"},1000);
+                $("#flyer-2").animate({"left":"40%","top":"60%"},1000);
+                $("#flyer-3").animate({"left":"50%","top":"40%"},1000);
+                $("#flyer-4").animate({"right":"25%","top":"55%"},1000);
+                $("#flyer-5").animate({"left":"18%","top":"8%"},1000);
+                $("#flyer-6").animate({"left":"27%","top":"55%"},1000);
+                $("#flyer-7").animate({"left":"50%","top":"7%"},1000);
+                $("#flyer-8").animate({"left":"28%","top":"5%"},1000);
+                $("#flyer-9").animate({"right":"26%","top":"20%"},1000);
+                $("#flyer-10").animate({"left":"15%","top":"5%"},1000);
+                $("#flyer-11").animate({"left":"50%","top":"40%"},1000);
                 
             }
 
             var click = function(){
-                // $("#flyer-1").animate({position ROTATE BACK TO 0 deg});
+                $("#flyer-0").animate({"left":"20%","top":"10%"},1000)
+                .delay(200)
+                .animate({
+                    "left":"8%", "top":"8%"
+                },1000);
 
+                $("#flyer-1").addClass("flyer-1").animate({
+                    "left":"5%", "top":"30%", "transform":"rotate(-13deg)"
+                },1000)
+                .delay(200)
+                .animate({
+                    "left":"5%", "top":"55%", "transform":"rotate(13deg)"
+                },1000);
+
+                $("#flyer-2").addClass("flyer-2").animate({"left":"5%", "top":"80%", "transform":"rotate(-13deg)"},1000)
+                .delay(200)
+                .animate({
+                    "right":"34%", "bottom":"10%", "transform":"rotate(-5deg)"
+                },1000);
+
+                $("#flyer-3").addClass("flyer-3").animate({"left":"5%", "top":"30%", "transform":"rotate(10deg)"},1000)
+                .delay(200)
+                .animate({"right":"8%", "bottom":"8%", "transform":"rotate(13deg)"},1000);
+
+                $("#flyer-4").addClass("flyer-4").animate({"left":"30%", "top":"30%", "transform":"rotate(10deg)"},1000)
+                .delay(200)
+                .animate({"right":"8%", "bottom":"8%", "transform":"rotate(13deg)"},1000);
+               
+                $("#flyer-5").addClass("flyer-5").animate({"left":"30%", "top":"30%", "transform":"rotate(10deg)"},1000)
+                .delay(200)
+                .animate({"right":"8%", "bottom":"8%", "transform":"rotate(13deg)"},1000);
+               
+                $("#flyer-6").addClass("flyer-6").animate({"left":"30%", "top":"30%", "transform":"rotate(10deg)"},1000)
+                .delay(200)
+                .animate({"right":"8%", "top":"8%", "transform":"rotate(13deg)"},1000);
+               
+                $("#flyer-7").addClass("flyer-7").animate({"left":"30%", "top":"30%", "transform":"rotate(10deg)"},1000)
+                .delay(200)
+                .animate({"right":"8%", "bottom":"8%", "transform":"rotate(13deg)"},1000);
+               
+                $("#flyer-8").addClass("flyer-8").animate({"left":"70%", "top":"30%", "transform":"rotate(10deg)"},1000)
+                .delay(200)
+                .animate({"right":"8%", "bottom":"8%", "transform":"rotate(13deg)"},1000);
+               
+                $("#flyer-9").addClass("flyer-9").animate({"left":"70%", "top":"30%", "transform":"rotate(10deg)"},1000)
+                .delay(200)
+                .animate({"right":"8%", "top":"8%", "transform":"rotate(13deg)"},1000);
+               
+                $("#flyer-10").addClass("flyer-10").animate({"left":"70%", "top":"30%", "transform":"rotate(10deg)"},1000)
+                .delay(200)
+                .animate({"right":"8%", "bottom":"8%", "transform":"rotate(13deg)"},1000);
+               
+                $("#flyer-11").addClass("flyer-11").animate({"left":"70%",  "top":"30%", "transform":"rotate(10deg)"},1000)
+                .delay(200)
+                .animate({"right":"8%", "bottom":"8%", "transform":"rotate(13deg)"},1000);
             }
             
             $(document).ready(function(){
+                $("#header").hide();
+                
                 $("#logo-button").on("mouseover", function(){
-                    hover();	
+                    on();
+                });
+
+                $("#logo-button").on("mouseout", function(){
+                    off();
                 });
 
                 $("#logo-button").on("click", function(){
                     click();
+                    $("#logo-button").hide();
+                    $("#landing").hide(4000);
+                    $("#header").show(3000);
                 })
             });
     
