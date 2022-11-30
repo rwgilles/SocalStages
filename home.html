@@ -1,23 +1,20 @@
 <html>
+    <meta charset="utf-8">
+    <meta charset="U+270c">
     <head>
         <title>Socal Stages</title>
-        <!-- <link rel="shortcut icon" type="image/x-icon" href=" "/> INSERT LOGO FOR WEBSITE HERE -->
+        <link rel="shortcut icon" type="image/x-icon" href="logo.ico"/>
         <link rel="stylesheet" href="stylesheet.css">
+        <link rel="stylesheet" href="https://use.typekit.net/rix4tuh.css">
 
-        <script>
-
-        </script>
+        <script src="jq.js"></script>
+        <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
         <style>
             #landing{
                 height: 100%;
                 width: 100%;
-                /* background-image: url(kitchen02.png); */
-                /* background-position: 0px -40px; */
-                /* background-color: rgb(6, 19, 32); */
-                /* background-color: rgb(67, 106, 144); */
                 margin: auto;
-                /* padding: 5%; */
             }
 
             #logo-button{
@@ -25,8 +22,7 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                width: 300px;
-                height: 300px;
+                height: 400px;
                 z-index: 3;
             }
 
@@ -49,15 +45,15 @@
             #flyer-1{
                 position: absolute;
                 top: 55%;
-                left: 5%;
-                transform: rotate(-15deg);
+                left: 2%;
+                transform: rotate(-10deg);
                 z-index: 2;
             }
 
             #flyer-2{
                 position: absolute;
                 top: 50%;
-                left: 35%;
+                right: 35%;
                 transform: rotate(5deg);
                 z-index: 2;
             }
@@ -72,7 +68,7 @@
             #flyer-4{
                 position: absolute;
                 top: 5%;
-                left: 70%;
+                right: 5%;
                 transform: rotate(-5deg);
                 z-index: -1;
             }
@@ -86,9 +82,10 @@
 
             #flyer-6{
                 position: absolute;
-                top: 47%;
-                left: 57%;
-                transform: rotate(6deg);
+                bottom: 7%;
+                right: 18%;
+                transform: rotate(-16deg);
+                z-index: 1;
             }
 
             #flyer-7{
@@ -100,30 +97,42 @@
 
             #flyer-8{
                 position: absolute;
-                top: 25%;
+                top: 15%;
                 left: 52%;
                 transform: rotate(-1deg);
             }
 
             #flyer-9{
                 position: absolute;
-                top: 45%;
-                left: 74%;
+                bottom: 5%;
+                right: 2%;
                 transform: rotate(-3deg);
             }
 
             #flyer-10{
                 position: absolute;
-                top: 27%;
-                left: 18%;
-                transform: rotate(8deg);
+                bottom: 10%;
+                left: 28%;
+                transform: rotate(-8deg);
             }
 
+            #flyer-11{
+                position: absolute;
+                bottom: 11%;
+                left: 15%;
+                transform: rotate(3deg);
+
+            }
 
             #endbar{
                 height: 100px;
                 padding: 2%;
                 background-color: rgb(14, 49, 90);
+            }
+
+            .space{
+                margin-right: 20px;
+                float: left;
             }
 
             /* HOVER OVER MAIN LOGO BUTTON THINGS WILL MOVE OUT OF THE PILE */
@@ -137,35 +146,86 @@
 
     <body>
         <div id="landing">
-            <img src="flyer-0.png" class="flyer" id="flyer-0">
-            <img src="ticket-logo.png" id="logo-button">
-            <img src="flyer-1.png" class="flyer" id="flyer-1">
-            <img src="flyer-2.jpg" class="flyer" id="flyer-2">
-            <img src="flyer-3.jpg" class="flyer" id="flyer-3">
-            <img src="flyer-4.jpg" class="flyer" id="flyer-4">
-            <img src="flyer-5.jpg" class="flyer" id="flyer-5">
-            <img src="flyer-6.jpg" class="flyer" id="flyer-6">
-            <img src="flyer-7.jpg" class="flyer" id="flyer-7">
-            <img src="flyer-8.jpg" class="flyer" id="flyer-8">
-            <img src="flyer-9.jpg" class="flyer" id="flyer-9">
-            <img src="flyer-10.jpg" class="flyer" id="flyer-10">
+            <img src="socalstages.png" id="logo-button">
+            <img src="flyer-0.png" class="flyer" id="flyer-0" alt="Conquest 2022 - Mura Musa">
+            <img src="flyer-1.png" class="flyer" id="flyer-1" alt="Surf Haus x 29th St">
+            <img src="flyer-2.jpg" class="flyer" id="flyer-2" alt="Cup of Troy x 29th St">
+            <img src="flyer-3.jpg" class="flyer" id="flyer-3" alt="29th St">
+            <img src="flyer-4.jpg" class="flyer" id="flyer-4" alt="Amplify x KXSC">
+            <img src="flyer-5.jpg" class="flyer" id="flyer-5" alt="Conquest 2021 - Kenny Beats">
+            <img src="flyer-6.jpg" class="flyer" id="flyer-6" alt="Springfest 2022">
+            <img src="flyer-7.jpg" class="flyer" id="flyer-7" alt="Mr. Zog & Mehki Clay">
+            <img src="flyer-8.jpg" class="flyer" id="flyer-8" alt="LiveTwoCreate x 29th St">
+            <img src="flyer-9.jpg" class="flyer" id="flyer-9" alt="Student Showcase">
+            <img src="flyer-10.jpg" class="flyer" id="flyer-10" alt="Welcome Back Concert 2022">
+            <img src="flyer-11.jpg" class="flyer" id="flyer-11" alt="">
         </div><br>
 
         <!-- next part: list view -->
-        <div id="list-view" style="padding: 5%;">
-            <h1 style="color:white">CONQUEST 2022</h1><hr>
-            <img src="flyer-0.png" class="flyer">
-            <p>INSERT CONCERT INFO</p>
+        <div id="list-view" style="padding: 5%; margin-bottom: 5%;">
+            <div>
+                <h1 style="font-size:60px">UPCOMING CONCERTS ✌︎</h1>
+            </div>
+            <div>
+                <h1>CONQUEST 2022</h1><hr>
+                <img src="flyer-0.png" class="flyer space">
+                <p>INSERT CONCERT INFO</p>
+            </div><br style="clear:both;">
 
+            <div>
+                <h1>Surf Haus x 29th St Productions</h1><hr>
+               
+                <img src="flyer-1.png" class="flyer space">
+                <p>INSERT CONCERT INFO</p>
+                
+            </div><br style="clear:both;">
             
         </div><br>
 
+        <!-- next part: calendar view -->
         <div id="calender-view" style="padding: 5%;">
-            <!-- next part: calendar view -->
-            <h1>CALENDER - insert</h1><hr>
+            <h1>CALENDER [insert below]</h1><hr>
         </div>
 
-        <div id="endbar">
-            <!-- end bar -->
-        </div>
+        <!-- end bar -->
+        <!-- <div id="endbar">
+        </div> -->
+
+        <script>
+            var hover = function(){
+                // $("#music").trigger("play").prop("volume", 0.6);
+    
+                // $("#header").animate({"opacity":1},5000);
+    
+                $("#flyer-0").animate({"left":"100px","top":"20px"},3000);
+                $("#flyer-1").animate({"left":"100px","top":"20px"},3000);
+                $("#flyer-2").animate({"left":"100px","top":"20px"},3000);
+                $("#flyer-3").animate({"left":"100px","top":"20px"},3000);
+                $("#flyer-4").animate({"left":"100px","top":"20px"},3000);
+                $("#flyer-5").animate({"left":"100px","top":"20px"},3000);
+                $("#flyer-6").animate({"left":"100px","top":"20px"},3000);
+                $("#flyer-7").animate({"left":"100px","top":"20px"},3000);
+                $("#flyer-8").animate({"left":"100px","top":"20px"},3000);
+                $("#flyer-9").animate({"left":"100px","top":"20px"},3000);
+                $("#flyer-10").animate({"left":"100px","top":"20px"},3000);
+                
+            }
+
+            var click = function(){
+                // $("#flyer-1").animate({position ROTATE BACK TO 0 deg});
+
+            }
+            
+            $(document).ready(function(){
+                $("#logo-button").on("mouseover", function(){
+                    hover();	
+                });
+
+                $("#logo-button").on("click", function(){
+                    click();
+                })
+            });
+    
+        </script>
     </body>
+</html>
