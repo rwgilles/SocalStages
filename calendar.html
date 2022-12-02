@@ -3,6 +3,9 @@
         <title>Calendar</title>
         <link rel="stylesheet" href="https://use.typekit.net/rix4tuh.css">
         <link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+        <link rel="shortcut icon" type="image/x-icon" href="logo.ico"/>
+        <script src="http://iyawebdev.com/jqm.js"></script>
+        <script src="http://iyawebdev.com/jqui.min.js"></script>
         <style>
             body{
                 color: white;
@@ -15,37 +18,71 @@
             }
             .month{
                 width: 80%;
-                height: 80%;
+                height: auto;
                 margin:auto;
-                
+    
             }
             .day{
                 border: solid white .5px;
                 flex: 15%;
-                padding: 3px;
+                padding: 2px;
             }
             .day:hover{
-                background-color: rgb(189, 150, 10);
-                
+                background-color: white;
+                color: black;
             }
-            
             #spill{
-                opacity: .4;
+                opacity: .5;
             }
             .pagetitle{
                 text-align: center;
             }
             .event{
                 text-align: center;
+                font-size: 1vw;
+                width: 100%;
+                height: 100%;
             }
-
-
+  
+            .snip{
+                width: 40%;
+                height: auto;
+                border: white 2px solid;
+                margin: auto;
+                border-radius: 32px;
+                text-align: center;
+                line-height: 1em;
+                position: relative;
+                z-index: 8 ;
+                padding: 5px;
+                color: black;
+                background-color: black;
+            }
+            .snip h1{
+                font-size: 2vw;
+            }
+            .snip h2{
+                font-size: 1vw;
+            }
+            #thumb{
+                float: left;
+                width: 20%;
+            }
+            .theme{
+                float:right;
+                margin-right: 15px;
+            }
         </style>
     </head>
+    <script>
+            $(document).ready(function() {
+                $(".snip").hide();
+            });
+    </script>
     <body>
         <div id="header">
             <div>
-                <img id="logo">
+                <img id="logo" src="sslogo.png">
             </div>
            
             <div id="navholder">
@@ -57,7 +94,16 @@
                 <a class="navitems"href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/collabs%20page.html">Contact</a>
             </div>
         </div>
-        <div class="pagetitle">December</div>
+        <div class="pagetitle">
+            December 
+            
+            <div id="light">
+                <img src="light.png" class="theme" style="width: 25px;">
+            </div><div id="dark">
+                <img src="dark.png" class="theme" style="width: 23px;">
+            </div>
+
+        </div>
         <div class="month">
             <div class="week">
                 <div class="day" id="spill">27</div>
@@ -67,8 +113,9 @@
                 <div class="day">1</div>
                 <div class="day">2</div>
                 <div class="day">3<br>
-                    <div class="event">
-                        CUP OF TROY
+                    <div class="event" id="syn">
+                            Synesthesia
+                            
                     </div>
                 </div>
             </div>
@@ -84,20 +131,17 @@
             <div class="week">
                 <div class="day">12</div>
                 <div class="day">13<br>
-                    <div class="event">
-                        CONQUEST
+                    <div class="event" id="spring">
+                        Springfest
                     </div>
-
                 </div>
                 <div class="day">14</div>
                 <div class="day">15</div>
                 <div class="day">16</div>
-                <div class="day">
-                    17 <br>
-                    <div class="event">
-                        SURF HAUS
+                <div class="day">17<br>
+                    <div class="event" id="house">
+                        House Show
                     </div>
-
                 </div>
                 <div class="day">18</div>
             </div>
@@ -109,24 +153,79 @@
                 <div class="day">23</div>
                 <div class="day">24</div>
                 <div class="day">25<br>
-                    <div class="event">
-                        X-MAS CONCERT
-                    </div>
                 </div>
             </div>
             <div class="week">
                 <div class="day">26</div>
                 <div class="day">27</div>
                 <div class="day">28</div>
-                <div class="day">29<br>
-                    <div class="event">
-                        SNOW CLUB
-                    </div>
-                </div>
+                <div class="day">29</div>
                 <div class="day">30</div>
                 <div class="day">31</div>
                 <div class="day" id="spill">1</div>
             </div>
+          </div><br>
+          <div id="preview1" class="snip">
+            <h1>Synesthesia</h1>
+            <p>Cup of Troy x 29th Street Productions</p>
+  
+            <!-- <img id="thumb" src="synesthesia.jpg"><br> -->
+            <h2>When: September 24th @ 9pm</h2>
+            <h2>Where: TBD</h2>
+            <p>Notes from the host:<br> "Get ready to dance!"</p>
           </div>
+          
+          <div id="preview2" class="snip">
+            <h1>Springfest</h1>
+            <p>USC Concerts</p>
+
+            <!-- <img id="thumb" src="springfest.jpg"><br> -->
+            <h2>When: December 8th @ 7pm</h2>
+            <h2>Where: The Quad</h2>
+            <p>Notes from the host:<br> "See USC Concerts page for more details"</p>
+          </div>
+          <div id="preview3" class="snip">
+            <h1>House Show</h1>
+            <p>29th St. Productions</p>
+   
+            <!-- <img id="thumb" src="houseshow.jpg"><br> -->
+            <h2>When: October 22nd @ 8pm</h2>
+            <h2>Where: 138 N San Fernando Rd.</h2>
+            <p>Notes from the host:<br> "Come dressed in your best rock outfits"</p>
+          </div>
+
+
+
+          <script>
+            // $("#syn").click(function(){
+            //     $("#preview").show();
+            //     $("#preview").html("<img src=synesthesia.jpg id='thumb'> <br><p>Cup of Troy x 29th Street Productions</p><h2>When: September 24th @ 9pm</h2><h2>Where: TBD</h2><p>Notes from the host: <br> 'Get ready to dance!'</p>")
+            // });
+            // $(".event").hover(function(){
+            //     $(this).toggleClass("descript");
+            // });
+            // $("#syn").hover(function(){
+            //     $(this).html(
+            //             "Synesthesia <br> <img src=synesthesia.jpg style='width: 50%;'><br><p>Cup of Troy x 29th Street Productions</p><h2>When: September 24th @ 9pm</h2><h2>Where: TBD</h2><p>Notes from the host: <br> 'Get ready to dance!'</p>"
+            //     );
+            // });
+  
+
+
+            $("#syn").click(function(){
+                $(".snip").hide();
+                $("#preview1").slideDown("slow");
+            });
+            $("#spring").click(function(){
+                $(".snip").hide();
+                $("#preview2").slideDown("slow");
+            });
+            $("#house").click(function(){
+                $(".snip").hide();
+                $("#preview3").slideDown("slow");
+            });
+            
+
+          </script>
     </body>
 </html>

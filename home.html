@@ -18,6 +18,17 @@
 
             a h1:hover{
                 letter-spacing: 2px;
+                text-decoration: underline;
+                text-decoration-color: blueviolet;
+            }
+
+            h2 a{
+                color: rgb(144, 241, 117);
+            }
+
+            h2 a:hover{
+                letter-spacing: 2px;
+                color: rgb(193, 241, 180);
             }
 
             hr{
@@ -37,6 +48,17 @@
                 transform: translate(-50%, -50%);
                 height: 300px;
                 z-index: 3;
+                transition-duration: 1s;
+                opacity: 1;
+            }
+
+            #logo-button:hover{
+                opacity: 0.3;
+                cursor: pointer;
+            }
+
+            #logo{
+                width:60%;
             }
 
             .flyer{
@@ -239,25 +261,53 @@
                 float: left;
             }
 
-            /* HOVER OVER MAIN LOGO BUTTON THINGS WILL MOVE OUT OF THE PILE */
-            /* #flyer-0:hover {
-                position: absolute;
-                top: 15%;
-                left: 30%;
-            } */
+            #navbar{
+                padding: 5% 5% 1% 5%
+            }
+
+            #navholder{
+                display:flex;
+                flex-direction:row;
+                width:90%;
+                justify-content:space-between;         
+            }
+
+            @media screen and (max-width:800px) {
+            #navholder{
+                flex-direction:column;
+                justify-content: space-around;
+                
+            }
+            #header{
+                margin-top:50px;
+                margin-bottom:5%;
+                flex-direction:column;
+                height:auto;
+                justify-content: space-around;
+            }
+            .button{
+                padding:3%;
+                font-size:.8em;
+                width:90%;
+            }
+            #logo{
+                margin-bottom:20%;
+            }
+        }
+
         </style>
     </head>
 
     <body>
-        <div style="padding: 5% 5% 1% 5%">
+        <div id="navbar">
             <div id="header">
-                <div>
-                    <img id="logo">
+                <div id="navlogo">
+                    <img id="logo" src="sslogo-small.png">
                 </div>
-               
+
                 <div id="navholder">
                     <!--replace the links!!-->
-                    <a class="navitems" href="#">Home</a>
+                    <a class="navitems" href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/home%20page-acad275.html">Home</a>
                     <a class="navitems"href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/about%20page.html">About</a>
                     <a class="navitems"href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/listen%20page.html">Calendar</a>
                     <a class="navitems"href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/collabs%20page.html">Map</a>
@@ -266,7 +316,6 @@
                 </div>
             </div>
         </div>
-        
 
         <div id="landing">
             <img src="socalstages.png" id="logo-button">
@@ -288,28 +337,38 @@
         <!-- next part: list view -->
         <div id="list-view" style="padding: 0% 5% 5% 5%; margin-bottom: 1%;">
             <div>
-                <a href="LINK TO LIST VIEW MAP PAGE"><h1 style="font-size:60px">UPCOMING CONCERTS ✌︎</h1></a>
+                <a href="# LINK TO LIST VIEW MAP PAGE"><h1 style="font-size:60px">UPCOMING CONCERTS ✌︎</h1></a>
             </div>
             <div>
                 <h1>CONQUEST 2022</h1>
                 <p>
-                    <em>Presented by CONSCERTS</em>
+                    <h2><strong><a href="https://www.instagram.com/uscconcerts/?hl=en">@uscconcerts</a></strong></h2>
                 </p><hr>
                 <img src="flyer-0.png" class="flyer space">
                 <div>
-                    <p>
-                        INSERT CONCERT INFO
-                    </p>
-                    
+                    <h3>November 17th</h3>
+                    <p>McCarthy Quad</p>
+                    <p>Doors Open 5:00 PM | Music Starts 8:30 PM</p>
+                
                 </div>
                 
             </div><br style="clear:both;">
 
             <div>
-                <h1>Surf Haus x 29th St Productions</h1><hr>
+                <h1>LIVE2 [SHOWCASE] #3 featuring: 12 AM and King Mala</h1>
+                <p>
+                    <!-- <em>Presented by 29th St Productions</em> -->
+                    <h2><strong><a href="https://www.instagram.com/29thst_productions/">@29thst_productions</a></strong></h2>
+                </p><hr>
                
-                <img src="flyer-1.png" class="flyer space">
-                <p>INSERT CONCERT INFO</p>
+                <img src="flyer-8.jpg" class="flyer space">
+                <div>
+                    <h3>November 5th</h3>
+                    <p>Address: 1143 W 29th St</p>
+                    <p>Doors Open 8:30 PM</p>
+                    <p>Tickets: Presale - $12 or $15 at the door</p>
+                    
+                </div>
                 
             </div><br style="clear:both;">
             
@@ -318,14 +377,12 @@
         <!-- next part: calendar view -->
         <div id="calender-view" style="padding: 5%;">
             <div>
-                <a href="LINK TO CALENDAR PAGE"><h1 style="font-size:60px">CALENDAR ✌︎</h1></a>
+                <a href="# LINK TO CALENDAR PAGE"><h1 style="font-size:60px">CALENDAR ✌︎</h1></a>
             </div>
             <div><p>INSERT CALENDAR</p></div>
         </div>
 
-        <!-- end bar -->
-        <!-- <div id="endbar">
-        </div> -->
+       
 
         <script>
             var on = function(){
@@ -416,7 +473,8 @@
             }
             
             $(document).ready(function(){
-                $("#header").hide();
+                $("#navlogo").hide();
+                $("#navholder").hide();
                 
                 $("#logo-button").on("mouseover", function(){
                     on();
@@ -430,7 +488,8 @@
                     click();
                     $("#logo-button").hide();
                     $("#landing").hide(4000);
-                    $("#header").show(3000);
+                    $("#navlogo").show(3000);
+                    $("#navholder").show(3000);
                 })
             });
     
