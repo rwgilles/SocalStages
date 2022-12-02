@@ -3,6 +3,7 @@
         <title>Calendar</title>
         <link rel="stylesheet" href="https://use.typekit.net/rix4tuh.css">
         <link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+        <link rel="shortcut icon" type="image/x-icon" href="logo.ico"/>
         <style>
             body{
                 color: white;
@@ -15,20 +16,18 @@
             }
             .month{
                 width: 80%;
-                height: 80%;
+                height: auto;
                 margin:auto;
-                
             }
             .day{
-                border: solid white .5px;
+                border: solid white 1px;
                 flex: 15%;
                 padding: 3px;
             }
             .day:hover{
                 background-color: rgb(189, 150, 10);
-                
+                transition-duration: 1000ms;
             }
-            
             #spill{
                 opacity: .4;
             }
@@ -37,11 +36,25 @@
             }
             .event{
                 text-align: center;
+                font-size: 1vw;
             }
+            #preview{
+                width: 80%;
+                height: 30%;
+                border: white 2px solid;
+                margin: auto;
+                border-radius: 32px;
 
-
+            }
+            #thumb{
+                float: left;
+            }
+    
         </style>
     </head>
+    <script>
+
+    </script>
     <body>
         <div id="header">
             <div>
@@ -87,7 +100,6 @@
                     <div class="event">
                         CONQUEST
                     </div>
-
                 </div>
                 <div class="day">14</div>
                 <div class="day">15</div>
@@ -97,7 +109,6 @@
                     <div class="event">
                         SURF HAUS
                     </div>
-
                 </div>
                 <div class="day">18</div>
             </div>
@@ -127,6 +138,22 @@
                 <div class="day">31</div>
                 <div class="day" id="spill">1</div>
             </div>
+          </div><br>
+          <div id="preview">
+
+            <img id="thumb" src="">
+            
           </div>
+
+
+
+          <script>
+            $(".event").click(function(){
+                
+            });
+           
+
+
+          </script>
     </body>
 </html>
