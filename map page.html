@@ -9,21 +9,21 @@
                 border-radius:32px;
                 padding:3% 5%;
                 line-height:1em;
-               
+                border: white 2px solid;
             }
             a{
                 text-decoration:none;
                 color:white;
             }
-            #container1{
-                background-color:rgb(15, 139, 139);     
+            /* #container1{
+                background-color:rgb(15, 139, 139);
             }
             #container2{
-                background-color:rgb(209, 139, 0);     
+                background-color:rgb(209, 139, 0);   
             }
             #container3{
                 background-color:rgb(0, 209, 98);     
-            }
+            }*/
             #map{
                 width:100%;
                 height:auto;
@@ -36,6 +36,9 @@
             .innercontainer{
                 width:80%;
             }
+            .icon{
+                width: 10%;
+            }
             .infoholder{
                 
                 display:flex;
@@ -44,12 +47,23 @@
                 align-items: center;
                
             }
+            #filterholder{
+                display:flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
             .posterinfo{
                 display:flex;
                 flex-direction: row;
                 align-items: center;
                 
               
+            }
+            #searcher{
+                display:flex;
+                flex-direction:row;
+                align-items: center;
             }
             #filter{
                 display:flex;
@@ -66,6 +80,12 @@
                display:flex;
                flex-direction:column;
             }
+            #search{
+                font-family: roc-grotesk, sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                font-size:1.5em;
+            }
            
             .leftalign{
              
@@ -78,6 +98,15 @@
                 width:80%;
                 height:auto;
                 margin-right:5%;
+            }
+            #wordsearch{
+                border-radius: 32px;
+                width:100%;
+               font-size:1.5em;
+                margin-right:5%;
+                background-color:black;
+                border:white 2px solid;
+                color:white;
             }
             #postercontainer2{
                 width:20%;
@@ -122,11 +151,41 @@
        
     </head>
     <body>
+        <script>
+          
+            var names=new Array;
+            var hosts= new Array;
+            var images = new Array;
+            var when = new Array;
+            var where = new Array;
+            var notes =new Array;
+            var tix=new Array;
+
+
+            var namesearch= new Array;
+            var hostsearch = new Array;
+            var imagesearch = new Array;
+            var whensearch = new Array;
+            var wheresearch = new Array;
+            var notesearch =new Array;
+            var tixsearch=new Array;
+
+            namesearch.push("Synesthesia");
+            hostsearch.push("Cup of Troy x 29th St. Productions");
+            imagesearch.push("synesthesia");
+            namesearch.push("Synesthesia");
+            whensearch.push("September 24th @ 9pm");
+            wheresearch.push("TBD");
+            notesearch.push("Get ready to dance!");
+            tixsearch.push("https://www.eventbrite.com/e/subtle-orange-strange-case-stiver-diver-crash-landing-tickets-463458826827");
+
+
+        </script>
         <div id="margins">
 
             <div id="header">
                 <div>
-                    <img id="logo">
+                    <img id="logo" src="sslogo.png">
                 </div>
                
                 <div id="navholder">
@@ -145,107 +204,430 @@
             <div id="map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8903.852035910737!2d-118.29003762482324!3d34.0227234028173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c7e49c71a5ed%3A0xaa905a5bb427a2c4!2sUniversity%20of%20Southern%20California!5e0!3m2!1sen!2sus!4v1669086362423!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <div id="filter">
-                <p class="filteritem">North</p>
-                <p class="filteritem">South</p>
-                <p class="filteritem">East</p>
-                <p class="filteritem">West</p>
-                <p class="filteritem">Favorites</p>
-            </div>
-            
-
-            <div class="contentholder" id ="container1">
-                <div class="title">
-                    <h1>Synesthesia</h1>
-                    <p>Cup of Troy x 29th Street Productions</p>
+            <div id="filterholder">
+                <div id="filter">
+                    <!--<p class="filteritem" id="north">North</p>
+                    <p class="filteritem" id="south">South</p>
+                    <p class="filteritem" id="east">East</p>
+                    <p class="filteritem" id="west">West</p>-->
+                    <p class="filteritem" id="faves">Favorites</p>
+                    <p class="filteritem" id="all">All</p>
+    
                 </div>
-                <br>
-                <div class="infoholder">
-                    <div class="posterinfo">
-                        <img class="poster" src="flyer-11.jpg">
-                        <div class="info">
-                            <h2>When: September 24th @ 9pm</h2>
-                            <h2>Where: TBD</h2>
-                            <p>Notes from the host:<br> "Get ready to dance!"</p>
-                            
-                        </div>
-                    </div>
-                    
-                    <div class="info">
-                        <div class="button">
-                            Calendar
-                        </div>
-                        <br>
-                        <div class="button">
-                            Tickets
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <br>
-            <div class="contentholder" id ="container2">
-                <div class="title">
-                    <h1>House Show</h1>
-                    <p>29th St. Productions</p>
-                </div>
-                <br>
-                <div class="infoholder">
-                    <div class="posterinfo">
-                        <img class="poster" src="flyer-3.jpg">
-                        <div class="info">
-                            <h2>When: October 22nd @ 8pm</h2>
-                            <h2>Where: 138 N San Fernando Rd.</h2>
-                            <p>Notes from the host:<br> "Come dressed in your best rock outfits"</p>
-                        </div>
-
-                    </div>
-                    
-                    <div class="info">
-                        <div class="button">
-                            Calendar
-                        </div>
-                        <br>
-                        <div class="button">
-                            Tickets
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <br>
-            <div class="contentholder" id ="container3">
-                <div class="title">
-                    <h1>Springfest</h1>
-                    <p>USC Concerts</p>
-                </div>
-                <br>
-                <div class="infoholder">
-                    <div class="posterinfo">
-                        <img class="poster" src="flyer-6.jpg">
-                        <div class="info">
-                            <h2>When: December 8th @ 7pm</h2>
-                            <h2>Where: The Quad</h2>
-                            <p>Notes from the host:<br> "See USC Concerts page for more details"</p>
-                            
-                        </div>
-                    </div>
-                    
-                    <div class="info">
-                        <div class="button">
-                            Calendar
-                        </div>
-                        <br>
-                        <div class="button">
-                            <a href="https://linktr.ee/uscconcerts">Tickets</a>
-                        </div>
-
-                    </div>
+                <div id="searcher">
+                    <input type="text" id="wordsearch">
+                    <input type="submit" id="search" value="Search">
                 </div>
             </div>
             
+            <div id="biglist">
+                <!--synesthesia-->
+                <div class="contentholder" id ="container0">
+                    <div class="title">
+                        <h1>Synesthesia</h1>
+                        <p>Cup of Troy x 29th Street Productions</p>
+                    </div>
+                    <br>
+                    <div class="infoholder">
+                        <div class="posterinfo">
+                            <img class="poster" src="synesthesia.jpg">
+                            <div class="info">
+                                <h2>When: September 24th @ 9pm</h2>
+                                <h2>Where: TBD</h2>
+                                <p>Notes from the host:<br> "Get ready to dance!"</p>
+                                <img class="icon" id="icon0" src="heartline.png"> 
+                            </div>
+                        </div>
+                        
+                        <div class="info">
+                            <div class="button">
+                                Calendar
+                            </div>
+                            <br>
+                            <div class="button">
+                                <a href="https://www.eventbrite.com/e/subtle-orange-strange-case-stiver-diver-crash-landing-tickets-463458826827">Tickets</a>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <!--house show-->
+                <div class="contentholder" id ="container1">
+                    <div class="title">
+                        <h1>House Show</h1>
+                        <p>29th St. Productions</p>
+                    </div>
+                    <br>
+                    <div class="infoholder">
+                        <div class="posterinfo">
+                            <img class="poster" src="houseshow.jpg">
+                            <div class="info">
+                                <h2>When: October 22nd @ 8pm</h2>
+                                <h2>Where: 138 N San Fernando Rd.</h2>
+                                <p>Notes from the host:<br> "Come dressed in your best rock outfits"</p>
+                                <img class="icon" id="icon1" src="heartline.png"> 
+                            </div>
+    
+                        </div>
+                        
+                        <div class="info">
+                            <div class="button">
+                                Calendar
+                            </div>
+                            <br>
+                            <div class="button">
+                                <a href="https://www.eventbrite.com/e/subtle-orange-strange-case-stiver-diver-crash-landing-tickets-463458826827">Tickets</a>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <!--springfest-->
+                <div class="contentholder" id ="container2">
+                    <div class="title">
+                        <h1>Springfest</h1>
+                        <p>USC Concerts</p>
+                    </div>
+                    <br>
+                    <div class="infoholder">
+                        <div class="posterinfo">
+                            <img class="poster" src="springfest.jpg">
+                            <div class="info">
+                                <h2>When: December 8th @ 7pm</h2>
+                                <h2>Where: The Quad</h2>
+                                <p>Notes from the host:<br> "See USC Concerts page for more details"</p>
+                                <img class="icon" id="icon2" src="heartline.png"> 
+                            </div>
+                        </div>
+                        
+                        <div class="info">
+                            <div class="button">
+                                Calendar
+                            </div>
+                            <br>
+                            <div class="button">
+                                <a href="https://linktr.ee/uscconcerts">Tickets</a>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <!--kxsc-->
+                <div class="contentholder" id ="container3">
+                    <div class="title">
+                        <h1>Backyard Show</h1>
+                        <p>KXSC x Amplify</p>
+                    </div>
+                    <br>
+                    <div class="infoholder">
+                        <div class="posterinfo">
+                            <img class="poster" src="kxsc.jpg">
+                            <div class="info">
+                                <h2>When: December 17th @ 7:30pm</h2>
+                                <h2>Where: Surf House</h2>
+                                <p>Notes from the host:<br> "Need a break from school? We got you covered."</p>
+                                <img class="icon" id="icon3" src="heartline.png"> 
+                            </div>
+                        </div>
+                        
+                        <div class="info">
+                            <div class="button">
+                                Calendar
+                            </div>
+                            <br>
+                            <div class="button">
+                                <a href="ignite.usc.edu/project/34716">Tickets</a>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+                <br>
+                 <!--welcome back-->
+                <div class="contentholder" id ="container4">
+                    <div class="title">
+                        <h1>Welcome Back</h1>
+                        <p>USC Concerts</p>
+                    </div>
+                    <br>
+                    <div class="infoholder">
+                        <div class="posterinfo">
+                            <img class="poster" src="wb.jpg">
+                            <div class="info">
+                                <h2>When: August 20th @ 6:30pm</h2>
+                                <h2>Where: The Quad</h2>
+                                <p>Notes from the host:<br> "See USC Concerts page for more details"</p>
+                                <img class="icon" id="icon4" src="heartline.png"> 
+                            </div>
+                        </div>
+                        
+                        <div class="info">
+                            <div class="button">
+                                Calendar
+                            </div>
+                            <br>
+                            <div class="button">
+                                <a href="https://linktr.ee/uscconcerts">Tickets</a>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <!--conquest-->
+                <div class="contentholder" id ="container5">
+                    <div class="title">
+                        <h1>Conquest</h1>
+                        <p>USC Concerts</p>
+                    </div>
+                    <br>
+                    <div class="infoholder">
+                        <div class="posterinfo">
+                            <img class="poster" src="conquest.jpg">
+                            <div class="info">
+                                <h2>When: December 13th @ 5pm</h2>
+                                <h2>Where: The Quad</h2>
+                                <p>Notes from the host:<br> "See USC Concerts page for more details"</p>
+                                <img class="icon" id="icon5" src="heartline.png"> 
+                            </div>
+                        </div>
+                        
+                        <div class="info">
+                            <div class="button">
+                                Calendar
+                            </div>
+                            <br>
+                            <div class="button">
+                                <a href="https://linktr.ee/uscconcerts">Tickets</a>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+                <br>  
+                <!--king mala-->
+                <div class="contentholder" id ="container6">
+                    <div class="title">
+                        <h1>King Mala</h1>
+                        <p>29th St. Productions</p>
+                    </div>
+                    <br>
+                    <div class="infoholder">
+                        <div class="posterinfo">
+                            <img class="poster" src="kingmala.jpg">
+                            <div class="info">
+                                <h2>When: November 5th @ 8:30pm</h2>
+                                <h2>Where: 1143 W 29th St.</h2>
+                                <p>Notes from the host:<br> "Tell your friends!"</p>
+                                <img class="icon" id="icon6" src="heartline.png"> 
+                            </div>
+                        </div>
+                        
+                        <div class="info">
+                            <div class="button">
+                                Calendar
+                            </div>
+                            <br>
+                            <div class="button">
+                                <a href="https://www.eventbrite.com/e/subtle-orange-strange-case-stiver-diver-crash-landing-tickets-463458826827">Tickets</a>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+                <div id="empty">
+                    <h2>Concerts coming soon!</h2>
+                </div>
+            </div>
             
+            <div id="favorites">
+
+            </div>
+            <div id="searchresults">
+
+            </div>
 
         </div>
+        <script>
+
+           
+            jQuery(document).ready(function(){
+
+                $("#favorites").hide();
+                //location filters
+
+                
+                $("#empty").hide();
+                
+
+                $("#icon0").click(function(){
+
+                    //if document.querySelector("#icon1").src = "heartline.png"; then fill and push array elements else remove the fill and pop \
+                    /*if (document.querySelector("#icon0").src = "heartline.png"){
+                        document.querySelector("#icon0").src = "heartfill.png";
+                        names.push("Synesthesia");
+                        hosts.push("Cup of Troy x 29th Street Productions");
+                        images.push("synesthesia");
+                        when.push("September 24th @ 9pm");
+                        where.push("TBD");
+                        notes.push("Get ready to dance!");
+                        tix.push("https://www.eventbrite.com/e/subtle-orange-strange-case-stiver-diver-crash-landing-tickets-463458826827");
+                    }
+                   // else {
+                        document.querySelector("#icon0").src = "heartline.png";
+                        names.splice(0,1);
+                        hosts.splice(0,1);
+                        images.splice(0,1);
+                        when.splice(0,1);
+                        where.splice(0,1);
+                        notes.splice(0,1);
+                        tix.splice(0,1);
+                    }*/
+                   
+                        document.querySelector("#icon0").src = "heartfill.png";
+                        names.push("Synesthesia");
+                        hosts.push("Cup of Troy x 29th Street Productions");
+                        images.push("synesthesia");
+                        when.push("September 24th @ 9pm");
+                        where.push("TBD");
+                        notes.push("Get ready to dance!");
+                        tix.push("https://www.eventbrite.com/e/subtle-orange-strange-case-stiver-diver-crash-landing-tickets-463458826827");
+                    
+                    
+                    
+                });
+
+                $("#icon1").click(function(){
+                   
+                        document.querySelector("#icon1").src = "heartfill.png";
+                        names.push("House Show");
+                        hosts.push("29th Street Productions");
+                        images.push("houseshow");
+                        when.push("October 22nd @ 8pm");
+                        where.push("138 N. San Fernando Rd.");
+                        notes.push("Come dressed in your best rock outfits!");
+                        tix.push("https://www.eventbrite.com/e/subtle-orange-strange-case-stiver-diver-crash-landing-tickets-463458826827");
+                    
+                });
+
+                $("#icon2").click(function(){
+                    if(!names.includes("Springfest")){
+                        document.querySelector("#icon2").src = "heartfill.png";
+                        names.push("Springfest");
+                        hosts.push("USC Concerts");
+                        images.push("springfest");
+                        when.push("December 8th @ 7pm");
+                        where.push("The Quad");
+                        notes.push("See USC Concerts page for more details");
+                        tix.push("https://linktr.ee/uscconcerts");
+                    }
+
+                });
+
+                $("#faves").click(function(){
+                    document.querySelector("#favorites").innerHTML = "";
+                    $("#biglist").hide();
+             
+                    favor();
+                    $("#favorites").show();
+                   
+                });
+                $("#all").click(function(){
+
+                    $("#biglist").show();
+                    //listing();
+                    
+                    $("#favorites").hide();
+           
+                });
+                $("#search").click(function(){
+                    searching(document.querySelector("#wordsearch").value);
+                });
+            });
+
+            //purpose of this function is to add to innerHTML of #favorites each favorited item 
+            var favor =function(){
+
+                
+
+                for(i=0; i<names.length; i++){
+                document.querySelector("#favorites").innerHTML += 
+                "<br>"+"<div class='contentholder'>"+
+                            "<div class='title'>"+
+                                "<h1>"+names[i]+"</h1>"+
+                                "<p>"+hosts[i]+"</p>"+
+                            "</div>" +
+                            "<br>"+
+                            "<div class='infoholder'>"+
+                                "<div class='posterinfo'>"+
+                                    "<img class='poster' src='"+images[i]+".jpg'>"+
+                                "<div class='info'>"+
+                                    "<h2>When: "+when[i]+"</h2>"+
+                                    "<h2>Where: "+where[i]+"</h2>"+
+                                    "<p>Notes from the host:<br>"+notes[i]+"</p>"+
+                                    "<img class='icon' id='icon'"+[i]+" src='heartfill.png'>"+
+                                "</div>"+
+                            "</div>"+
+                        
+                            "<div class='info'>"+
+                                "<div class='button'>"+
+                                    "Calendar"+
+                                "</div>"+
+                                "<br>"+
+                                "<div class='button'>"+
+                                    "<a href="+tix[i]+">Tickets</a>"+
+                                "</div>"+
+                            "</div>"+
+                "</div>";
+                }
+            }
+
+            var searching =function(searchtext){
+                $("#biglist").hide();
+                $("#searchresults").innerHTML="";
+                for(i=0;i<namesearch.length; i=i+1) {
+
+                if
+                (namesearch[i].toLowerCase().indexOf(searchtext.toLowerCase()) >= 0 
+        		|| hostsearch[i].toLowerCase().indexOf(searchtext.toLowerCase()) >= 0)
+                    {
+                        document.querySelector("#searchresults").innerHTML += 
+                        "<br>"+"<div class='contentholder'>"+
+                            "<div class='title'>"+
+                                "<h1>"+namesearch[i]+"</h1>"+
+                                "<p>"+hostsearch[i]+"</p>"+
+                            "</div>" +
+                            "<br>"+
+                            "<div class='infoholder'>"+
+                                "<div class='posterinfo'>"+
+                                    "<img class='poster' src='"+imagesearch[i]+".jpg'>"+
+                                "<div class='info'>"+
+                                    "<h2>When: "+whensearch[i]+"</h2>"+
+                                    "<h2>Where: "+wheresearch[i]+"</h2>"+
+                                    "<p>Notes from the host:<br>"+notes[i]+"</p>"+
+                                    "<img class='icon' id='icon'"+[i]+" src='heartfill.png'>"+
+                                "</div>"+
+                            "</div>"+
+                        
+                            "<div class='info'>"+
+                                "<div class='button'>"+
+                                    "Calendar"+
+                                "</div>"+
+                                "<br>"+
+                                "<div class='button'>"+
+                                    "<a href="+tixsearch[i]+">Tickets</a>"+
+                                "</div>"+
+                            "</div>"+
+                    "</div>";
+                    }
+                }
+            };
+
+
+        </script>
+
     </body>
 </html>
