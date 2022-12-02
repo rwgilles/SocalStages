@@ -124,7 +124,6 @@ a:hover{
     padding:5%;
 }
 @media screen and (max-width:800px) {
-    
     #navholder{
         flex-direction:column;
         justify-content: space-around;
