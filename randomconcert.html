@@ -1,0 +1,163 @@
+
+<html>
+<head>
+    <link rel="stylesheet" href="https://use.typekit.net/rix4tuh.css">
+    <link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+    <script src="jquery.js"></script>
+    <script src="randomconcert.js"></script>
+    <script src="jquery-3.6.1.min.js"></script>
+
+    <title>Random Concert picker</title>
+    <style>
+
+        #generate{
+            padding: 10px;
+            margin: 2%; 
+            margin: auto;
+            text-align: center;
+            color:#000000;
+            background-color: #F1F1F1;
+            border: 2px solid #F1F1F1; 
+            border-radius: 20px;
+            font-family: roc-grotesk, sans-serif;
+            font-size: 20px; 
+            width: 150px; 
+        }
+        #generate:hover{
+            transition: 0.5;
+            color: #ffffff;
+            background-image: linear-gradient(to  left, #e57a00, #9bd39f);
+        }
+        #main-photo img{
+            width: 30%; 
+            height: auto; 
+            object-fit: cover;
+        }
+    
+        #random-gallery-main{
+            display: flex; 
+        }
+        #random-gallery-thumbs{
+            display: flex; 
+            flex-direction: column;
+            height: 100px; 
+            width: 85%; 
+        }
+        .thumb{
+            margin-top: 2%; 
+            width: 100px; 
+            height: 100px; 
+            object-fit: cover;
+        }
+        .highlighted-thumb{
+            border: 3px solid #F1F1F1; 
+          
+        }
+        
+        #galleryholder{
+            display: flex;
+            flex-direction: row;
+            border: 2px solid #9BD3C1;
+            width: 80%;
+            margin-left: auto; margin-right: auto;
+            text-align: center;
+            margin-top: 2%;
+        }
+
+       #contenttext{
+        padding: 1%;
+       }
+        
+/*Nav bar*/
+
+        #navbar{
+                padding: 5% 5% 1% 5%
+            }
+
+            #navholder{
+                display:flex;
+                flex-direction:row;
+                width:90%;
+                justify-content:space-between;         
+            }
+
+            @media screen and (max-width:800px) {
+            #navholder{
+                flex-direction:column;
+                justify-content: space-around;
+                
+            }
+            #header{
+                margin-top:50px;
+                margin-bottom:5%;
+                flex-direction:column;
+                height:auto;
+                justify-content: space-around;
+            }
+            .button{
+                padding:3%;
+                font-size:.8em;
+                width:90%;
+            }
+            #logo{
+                margin-bottom:20%;
+            }
+        }
+
+    
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar + Header -->
+    
+    <div id="navbar">
+        <div id="header">
+            <div id="navlogo">
+                <img id="logo" src="sslogo-small.png">
+            </div>
+
+            <div id="navholder">
+                <!--replace the links!!-->
+                <a class="navitems" href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/home%20page-acad275.html">Home</a>
+                <a class="navitems"href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/about%20page.html">About</a>
+                <a class="navitems"href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/listen%20page.html">Calendar</a>
+                <a class="navitems"href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/collabs%20page.html">Map</a>
+                <a class="navitems"href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/collabs%20page.html">Submit</a>
+                <a class="navitems"href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/collabs%20page.html">Contact</a>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <!-- content-->
+    <div id="contenttext">
+        <div >
+            <h2>No Plans? Find your next move here!</h2>
+            <button id="generate">Generate!</button>
+        </div>
+        <br>
+        <div id="galleryholder">
+            <!-- start of main -->
+            <div id="random-gallery-main">
+                <div id="main-photo">
+                    <img style="width:500px" src="generateconcert.png">
+                </div> 
+            </div> 
+
+            <div id="random-gallery-thumbs">
+                <script>
+                    for(i = 0; i < 4; i++){
+                        tag = "<div class='thumbnail-pic'><img class='thumb' src='" + images[i] + "'></div>"; 
+                        document.write(tag); 
+                    }
+                    </script>
+            </div> 
+        </div>
+
+    </div>
+
+    
+    </body>
+</html>
