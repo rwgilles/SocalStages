@@ -62,15 +62,16 @@ ul{
     margin-bottom:8%;
     justify-content: space-between;
 }
+
 #logo{
     width:30%;
 }
+
 #navholder{
     display:flex;
     flex-direction:row;
     width:100%;
-    justify-content:space-between;
-                
+    justify-content:space-between;         
 }
 .navitems{
     font-family: roc-grotesk-extrawide,sans-serif;
