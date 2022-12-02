@@ -61,6 +61,7 @@ ul{
     position:relative;
     margin-bottom:8%;
     justify-content: space-between;
+    max-width:100%;
 }
 #logo{
     width:30%;
@@ -122,12 +123,28 @@ a:hover{
 #margins{
     padding:5%;
 }
+@media screen and (max-width:1200px){
+    #logo{
+        min-width:40%;
+    }
+    .navitems{
+        font-size:1em;
+        padding-left:3%;
+    }
+    #navholder{
+        width:80%;
+    }
+}
 @media screen and (max-width:800px) {
     
     #navholder{
         flex-direction:column;
         justify-content: space-around;
+        width:100%;
         
+    }
+    .navitems{
+        font-size:1.2em;
     }
     #header{
         margin-top:50px;
@@ -142,6 +159,7 @@ a:hover{
         width:90%;
     }
     #logo{
+        min-width:30%;
         margin-bottom:3%;
     }
 }
