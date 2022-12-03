@@ -1,0 +1,240 @@
+<html>
+    <head>
+    <link rel="stylesheet" href="https://use.typekit.net/rix4tuh.css">
+    <link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+    <link href="lightbox.min.css" rel="stylesheet" type="text/css"/>
+    <script src="jquery-3.6.1.min.js"></script>
+    <script src="lightbox-plus-jquery.min.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="logo.ico"/>
+
+    <title>Socal Stages</title>
+    <!-- insert page icon picture -->
+    <style>
+
+        h4{
+        }
+       
+        span{
+            font-family: roc-grotesk, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            color:white;
+        }
+
+        .thumb{
+       
+            }
+
+        .gallery{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .gallery img{
+            width: 100%;
+            height: auto;
+            filter: grayscale(100);
+            transition: .5s;
+        }
+
+        .gallery img:hover{
+            filter: grayscale(0);
+            transform: scale(1.05);
+        }
+
+        .ppcaption{
+            width: 80%;
+            padding: 5%;
+           
+        }
+
+        #role{
+            color: rgb(189, 150, 10)
+        }
+
+        #mission{
+            text-decoration: underline;
+        }
+
+        .ppcaption li{
+            line-height: 100%;
+        }
+
+        .gallery1{
+            border: 2px solid rgba(255, 255, 255, 0.518);
+            margin: 2%;
+           justify-content: center;
+        }
+
+        @media screen and (max-width:800px) {
+            #navholder{
+                flex-direction:column;
+                justify-content: space-around;
+                
+            }
+            #header{
+                margin-top:50px;
+                margin-bottom:5%;
+                flex-direction:column;
+                height:auto;
+                justify-content: space-around;
+            }
+            .button{
+                padding:3%;
+                font-size:.8em;
+                width:90%;
+            }
+            #logo{
+                margin-bottom:20%;
+            }
+
+
+            .gallery{
+                display: flex;
+                flex-direction: column;
+        
+            }
+
+            .gallery img{
+                 width: 80%;
+                 height: auto;
+                 margin-top: 10%;
+            }
+
+            .thumb{
+                margin-left: auto;margin-right: auto;
+            }
+
+            .ppcaption{
+                width: 80%;
+                padding: 2%;
+          
+            }
+
+            .gallery1{
+                padding-left: 17%;
+            }
+
+       
+
+            
+        }
+
+      
+
+
+    </style>
+    </head>
+    <body>
+        <div id="margins">
+            <div id="navbar">
+                <div id="header">
+                    <div id="navlogo">
+                        <img id="logo" src="sslogo-small.png">
+                    </div>
+    
+                    <div id="navholder">
+                        <!--replace the links!!-->
+                        <a class="navitems" href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/home%20page-acad275.html">Home</a>
+                        <a class="navitems"href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/about%20page.html">About</a>
+                        <a class="navitems"href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/listen%20page.html">Calendar</a>
+                        <a class="navitems"href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/collabs%20page.html">Map</a>
+                        <a class="navitems"href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/collabs%20page.html">Submit</a>
+                        <a class="navitems"href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/collabs%20page.html">Contact</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="maincontent">
+                <div>
+        
+                    <h1>About Socal Stages</h1>
+                    <p>SC Live is created with the mission to bring USC students together one concert at a time. The primary goal of the website is to help student organizations and/or musicians to publicize their concert events. All they need to do is fill out a form to provide details on their concert and we will work on the back end to upload their information on an interactive calendar and map. Additionally, they can request to get connected to graphic designers and photographers.
+                        We believe that the website has the potential to gain wide exposure because it attracts students from all backgrounds and it serves a variety of needs. 
+               <span id="mission" style="text-decoration-color: rgb(189, 150, 10)">Ultimately, we hope that SC Live can become a budding online hub that USC students use to seek help or to seek fun!</span>
+                    </p>
+                </div>
+                <br>
+                <div>
+                    <h1>Meet the Socal Stages Team</h1>
+                        <div class="gallery">
+                            <div class="gallery1">
+                                <a href="ryanpp.png" data-lightbox="mygallery" data-title="Ryan" class="thumb" >
+                                    <img src="ryanpp.png" >
+                                   
+                                </a> 
+
+                                <div class="ppcaption">
+                                    <a href="https://www.linkedin.com/in/ryan-gillespie-973804197/"><h2>Ryan Gillespie</h2></a>
+                                    <h4 >Role:  <span id="role">Product Manager, Designer (JavaScript)</span></h4>
+                                    <h4>Skills:</h4>
+                                    <ul id="role">
+                                        <li>Photoshop</li>
+                                        <li>CSS + HTML basics</li>
+                                        <li>Javascript</li>
+                                        <li>Jquery</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="gallery1">
+                                <a href="jadenpp.png" data-lightbox="mygallery" data-title="Jaden" class="thumb">
+                                    <img src="jadenpp.png" >
+                                </a>
+
+                                <div class="ppcaption">
+                                    <a href="https://www.linkedin.com/in/jaden-young/"><h2>Jaden Young</h2></a>
+                                    <h4 >Role: <span id="role">Vibe Manager, Designer (JavaScript)</h4></span>
+                                    <h4>Skills:</h4>
+                                    <ul id="role">
+                                        <li>Photoshop</li>
+                                        <li>CSS + HTML basics</li>
+                                        <li>Figma</li>
+                                        <li>UI/UX Design</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="gallery1">
+                                <a href="qianpp.png" data-lightbox="mygallery" data-title="Qian" class="thumb">
+                                    <img src="qianpp.png" >
+                                </a>
+
+                                <div class="ppcaption">
+                                    <a href="https://www.linkedin.com/in/qian34/"><h2>Qian Long</h2></a>
+                                    <h4 >Role: <span id="role">Human Relations, Designer (HTML/CSS)</span></h4>
+                                    <h4>Skills:</h4>
+                                    <ul id="role">
+                                        <li>Adobe Creative Suite Softwares</li>
+                                        <li>CAD & 3D Modeling</li>
+                                        <li>CSS + HTML basics</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="gallery1">
+                                <a href="elliepp.png" data-lightbox="mygallery" data-title="Ellie" class="thumb"><img src="elliepp.png" ></a>
+
+                                <div class="ppcaption">
+                                    <a href="https://www.linkedin.com/in/elizabeth-ouyang-4bbaa58b"><h2>Elizabeth Ouyang</h2></a>
+                                    <h4 >Role: <span id="role">Question Asker, Designer (HTML/CSS)</span></h4>
+                                    
+                                    <div>
+                                    <h4 id="skills" >Skills:</h4>
+                                    <ul id="role">
+                                        <li>Adobe Creative Suite</li>
+                                        <li>CSS + HTML basics</li>
+                                        <li>Figma</li>
+                                        <li>CAD & 3D Modeling</li>
+                                    </ul>       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>  
+
+        </div>
+        
+    </body>
+</html>
