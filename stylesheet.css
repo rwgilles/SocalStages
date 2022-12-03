@@ -27,7 +27,7 @@ h1{
     font-weight: 700;
     font-style: normal;
     color:white;
-    font-size:2.5em; 
+    font-size:3em; 
 }
 h2{
     font-family: roc-grotesk, sans-serif;
@@ -128,8 +128,14 @@ a:hover{
     padding:0% 5%  5%  5%;
 }
 
-.title{
+.title-home{
     font-size: 4em;
+}
+
+.title{
+    font-size: 2em;
+    line-height:.5;
+    
 }
 
 @media screen and (max-width:1800px){
@@ -196,7 +202,7 @@ a:hover{
     }
 
     .title{
-        font-size: 3em;
+        font-size: 2.5em;
     }
 }
 

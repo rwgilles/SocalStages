@@ -6,6 +6,10 @@
         <link rel="shortcut icon" type="image/x-icon" href="logo.ico"/>
         <link rel="stylesheet" href="stylesheet.css">
         <link rel="stylesheet" href="https://use.typekit.net/rix4tuh.css">
+        <link href="lighttheme.css" rel="stylesheet" type="text/css"/>
+        <link href="darktheme.css" rel="stylesheet" type="text/css"/>
+        <script src="http://iyawebdev.com/jqm.js"></script>
+        <script src="http://iyawebdev.com/jqui.min.js"></script>
         <script src="jq.js"></script>
         <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
@@ -59,6 +63,131 @@
             /* #logo{
                 width:60%;
             } */
+
+            body{
+                font-family: roc-grotesk, sans-serif;
+            }
+            .week {
+                display: flex;
+                height: 100px;
+                align-content: center;
+            }
+            .month{
+                width: 80%;
+                height: auto;
+                margin:auto;
+            }
+            .day{
+                flex: 15%;
+                padding: 2px;
+            }
+            .day:hover{
+                transition-duration: 1000ms;
+            }
+            #spill{
+                opacity: .5;
+            }
+            .pagetitle{
+                text-align: center;
+            }
+            .event{
+                text-align: center;
+                font-size: 1vw;
+                width: 100%;
+                height: 100%;
+            }
+  
+            .snip{
+                width: 40%;
+                height: auto;
+                margin: auto;
+                border-radius: 32px;
+                text-align: center;
+                line-height: 1em;
+                position: relative;
+                z-index: 8 ;
+                padding: 5px;
+                
+            }
+            .snip h1{
+                font-size: 2vw;
+            }
+            .snip h2{
+                font-size: 1vw;
+            }
+            #thumb{
+                float: left;
+                width: 20%;
+                position: absolute;
+            }
+            .theme{
+                float:right;
+                margin-right: 15px;
+            }
+
+            .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+            }
+            .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+            }
+            .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+            border: solid 1px grey;
+            }
+            .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+            }
+            input:checked + .slider {
+            background-color: black;
+            }
+            input:checked + .slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+            }
+            .slider.round {
+            border-radius: 34px;
+            }
+            .slider.round:before {
+            border-radius: 50%;
+            }
+
+            @media screen and (max-width:800px) {
+                .event{
+                    font-size: 2vw;
+                }
+                .snip h2{
+                    font-size: 2vw;
+                }
+                .snip h1{
+                    font-size: 3vw;
+                }
+                .snip p{
+                    font-size: 2vw;
+                }
+            }
 
             .flyer{
                 width: 300px;
@@ -271,8 +400,6 @@
                 justify-content:space-between;         
             }
 
-           
-
             @media screen and (max-width:800px) {
             #navholder{
                 flex-direction:column;
@@ -303,17 +430,16 @@
         <div id="navbar">
             <div id="header">
                 <div id="navlogo">
-                    <img id="logo" src="sslogo-small.png">
+                    <a href="http://webdev.iyaclasses.com/~qianlong/acad275/Socal%20Stages/home-page.html"><img id="logo" src="sslogo-small.png"></a>
                 </div>
 
                 <div id="navholder">
-                    <!--replace the links!!-->
-                    <a class="navitems" href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/home%20page-acad275.html">Home</a>
-                    <a class="navitems"href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/about%20page.html">About</a>
-                    <a class="navitems"href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/listen%20page.html">Calendar</a>
-                    <a class="navitems"href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/collabs%20page.html">Map</a>
-                    <a class="navitems"href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/collabs%20page.html">Submit</a>
-                    <a class="navitems"href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/collabs%20page.html">Contact</a>
+                    <a class="navitems"href="https://webdev.iyaclasses.com/~qianlong/acad275/Socal%20Stages/about-page.html">About</a>
+                    <a class="navitems"href="http://webdev.iyaclasses.com/~qianlong/acad275/Socal%20Stages/calendar.html">Calendar</a>
+                    <a class="navitems"href="http://webdev.iyaclasses.com/~qianlong/acad275/Socal%20Stages/map%20page.html">Map</a>
+                    <a class="navitems" href="http://webdev.iyaclasses.com/~qianlong/acad275/Socal%20Stages/randomconcert.html">Shuffle</a>
+                    <a class="navitems"href="http://webdev.iyaclasses.com/~qianlong/acad275/Socal%20Stages/submissionpage.html">Submit</a>
+                    <a class="navitems"href="http://webdev.iyaclasses.com/~qianlong/acad275/Socal%20Stages/contact.html">Contact</a>
                 </div>
             </div>
         </div>
@@ -338,7 +464,7 @@
         <!-- next part: list view -->
         <div id="list-view" style="padding: 0% 5% 5% 5%; margin-bottom: 1%;">
             <div>
-                <a href="# LINK TO LIST VIEW MAP PAGE"><h1 class="title">UPCOMING CONCERTS ✌︎</h1></a>
+                <a href="http://webdev.iyaclasses.com/~qianlong/acad275/Socal%20Stages/map%20page.html"><h1 class="title-home">UPCOMING CONCERTS ✌︎</h1></a>
             </div>
             <div>
                 <h1>CONQUEST 2022</h1>
@@ -372,12 +498,122 @@
         <!-- next part: calendar view -->
         <div id="calender-view" style="padding: 5%;">
             <div>
-                <a href="# LINK TO CALENDAR PAGE"><h1 class="title">CALENDAR ✌︎</h1></a>
+                <a href="http://webdev.iyaclasses.com/~qianlong/acad275/Socal%20Stages/calendar.html"><h1 class="title-home">CALENDAR ✌︎</h1></a><br>
             </div>
-            <div><p>INSERT CALENDAR</p></div>
-        </div>
+
+            <div class="pagetitle">
+                December 
+
+    
+            </div><br>
+
+            <div class="month">
+                <div class="week">
+                    <div class="day" id="spill">27</div>
+                    <div class="day" id="spill">28</div>
+                    <div class="day" id="spill">29</div>
+                    <div class="day" id="spill">30</div>
+                    <div class="day">1</div>
+                    <div class="day">2</div>
+                    <div class="day">3<br>
+                    </div>
+                </div>
+                <div class="week">
+                    <div class="day">5</div>
+                    <div class="day">6</div>
+                    <div class="day">7</div>
+                    <div class="day">8<br>
+                        <div class="event" id="spring">
+                            Springfest
+                        </div>
+                    </div>
+                    <div class="day">9</div>
+                    <div class="day">10</div>
+                    <div class="day">11</div>
+                </div>
+                <div class="week">
+                    <div class="day">12</div>
+                    <div class="day">13<br>
+                        <div class="event" id="conquest">
+                            Conquest
+                        </div>
+                    </div>
+                    <div class="day">14</div>
+                    <div class="day">15</div>
+                    <div class="day">16</div>
+                    <div class="day">17<br>
+                        <div class="event" id="house">
+                            Backyard Show
+                        </div>
+                    </div>
+                    <div class="day">18</div>
+                </div>
+                <div class="week">
+                    <div class="day">19</div>
+                    <div class="day">20</div>
+                    <div class="day">21</div>
+                    <div class="day">22</div>
+                    <div class="day">23</div>
+                    <div class="day">24</div>
+                    <div class="day">25<br>
+                    </div>
+                </div>
+                <div class="week">
+                    <div class="day">26</div>
+                    <div class="day">27</div>
+                    <div class="day">28</div>
+                    <div class="day">29</div>
+                    <div class="day">30</div>
+                    <div class="day">31</div>
+                    <div class="day" id="spill">1</div>
+                </div>
+              </div><br>
+              <div id="preview1" class="snip">
+                <h1>Conquest</h1>
+                <p>USC Concerts</p>
+      
+                <!-- <img id="thumb" src="synesthesia.jpg"><br> -->
+                <h2>When: December 13th @ 5pm</h2>
+                <h2>Where: The Quad</h2>
+                <p>Notes from the host:<br> "See USC Concerts page for more details"</p><br>
+              </div>
+              
+              <div id="preview2" class="snip">
+                <h1>Springfest</h1>
+                <p>USC Concerts</p>
+    
+                <!-- <img id="thumb" src="springfest.jpg"><br> -->
+                <h2>When: December 8th @ 7pm</h2>
+                <h2>Where: The Quad</h2>
+                <p>Notes from the host:<br> "See USC Concerts page for more details"</p><br>
+              </div>
+
+              <div id="preview3" class="snip">
+                <h1>Backyard Show</h1>
+                <p>KXSC x Amplify</p>
+       
+                <!-- <img id="thumb" src="houseshow.jpg"><br> -->
+                <h2>When: December 17th @ 7:30pm</h2>
+                <h2>Where: Surf House</h2>
+                <p>Notes from the host:<br> "Need a break from school? We got you covered."</p><br>
+              </div>
+
+
 
         <script>
+            $("#conquest").click(function(){
+                $(".snip").hide();
+                $("#preview1").slideDown("slow");
+            });
+            $("#spring").click(function(){
+                $(".snip").hide();
+                $("#preview2").slideDown("slow");
+            });
+            $("#house").click(function(){
+                $(".snip").hide();
+                $("#preview3").slideDown("slow");
+            });
+
             var on = function(){
                 $("#flyer-0").animate({"left":"20%","top":"10%"},1000);
                 $("#flyer-1").animate({"left":"15%","top":"50%"},1000);
@@ -465,9 +701,11 @@
                 .animate({"right":"8%", "bottom":"8%", "transform":"rotate(13deg)"},1000);
             }
             
+          
             $(document).ready(function(){
                 $("#navlogo").hide();
                 $("#navholder").hide();
+                $(".snip").hide();
                 
                 $("#logo-button").on("mouseover", function(){
                     on();
@@ -486,6 +724,19 @@
                 })
             });
     
+            $("#conquest").click(function(){
+                $(".snip").hide();
+                $("#preview1").slideDown("slow");
+            });
+            $("#spring").click(function(){
+                $(".snip").hide();
+                $("#preview2").slideDown("slow");
+            });
+            $("#house").click(function(){
+                $(".snip").hide();
+                $("#preview3").slideDown("slow");
+            });
+
         </script>
     </body>
 </html>

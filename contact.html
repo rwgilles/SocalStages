@@ -1,0 +1,108 @@
+<html>
+    <title>Contact Us</title>
+    <link rel="shortcut icon" type="image/x-icon" href="logo.ico"/>
+    <head>
+        <link rel="stylesheet" href="https://use.typekit.net/rix4tuh.css">
+        <link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+        <script src="http://iyawebdev.com/jqm.js"></script>
+        <script src="http://iyawebdev.com/jqui.min.js"></script>
+        <style>
+            #left{
+                margin:3%;
+            }
+            #right{
+                color: white;
+                margin:3%;
+            }
+
+            #container{
+                margin: 3%;
+                display: flex;
+                font-family: roc-grotesk, sans-serif;
+                justify-content: center;
+            }
+
+            #photo{
+                height: 550px;
+            }
+
+            label{
+                color: rgb(49, 183, 16);
+                font-family: roc-grotesk-wide, sans-serif;
+            }
+
+            h1{
+                color:rgba(255, 114, 32, 0.9);
+                font-family: roc-grotesk-wide, sans-serif;
+            }
+
+           text{
+            width: 400px;
+           }
+
+            textarea{
+                width: 400px;
+                height: 100px;
+                color:rgba(255, 114, 32, 0.9);
+            }
+
+            #button{
+                font-family: roc-grotesk-wide, sans-serif;
+                font-size: 15px;
+                background-color:rgba(255, 114, 32, 0.9);
+                color: white;
+            }
+            @media screen and (max-width:800px) {
+                #container{
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 5%;
+                }
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div id="navbar">
+            <div id="header">
+                <div id="navlogo">
+                    <a href="http://webdev.iyaclasses.com/~qianlong/acad275/Socal%20Stages/home-page.html"><img id="logo" src="sslogo-small.png"></a>
+                </div>
+
+                <div id="navholder">
+                    <a class="navitems"href="https://webdev.iyaclasses.com/~qianlong/acad275/Socal%20Stages/about-page.html">About</a>
+                    <a class="navitems"href="http://webdev.iyaclasses.com/~qianlong/acad275/Socal%20Stages/calendar.html">Calendar</a>
+                    <a class="navitems"href="http://webdev.iyaclasses.com/~qianlong/acad275/Socal%20Stages/map%20page.html">Map</a>
+                    <a class="navitems" href="http://webdev.iyaclasses.com/~qianlong/acad275/Socal%20Stages/randomconcert.html">Shuffle</a>
+                    <a class="navitems"href="http://webdev.iyaclasses.com/~qianlong/acad275/Socal%20Stages/submissionpage.html">Submit</a>
+                    <a class="navitems"href="http://webdev.iyaclasses.com/~qianlong/acad275/Socal%20Stages/contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="container">
+            <div id="left">
+                <img id="photo" src="sccollage.png">
+            </div>
+            <div id="right">
+                <h1>Contact Us</h1>
+                <label><strong>First name:</strong></label>
+                <br><input type="text" name="firstname" autofocus='1'/><br/>
+                <br/>
+                <label><strong>Last name:</strong></label> 
+                <br><input type="text" name="lastname"/><br/>
+                <br/>
+                <label><strong>Email:</strong></label>
+                <br> <input type="email" name="email"  required='1' title="Enter valid email address."/><br/>
+                <br>
+                <label><strong>Message</strong></label>
+                <br><textarea name="story"></textarea> <br/>
+                <br/>
+                <button id="button" type="button">Submit </button>
+            </div>
+        </div>
+
+
+    </body>
+</html>
