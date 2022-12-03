@@ -1,0 +1,491 @@
+<html>
+    <meta charset="utf-8">
+    <meta charset="U+270c">
+    <head>
+        <title>Socal Stages</title>
+        <link rel="shortcut icon" type="image/x-icon" href="logo.ico"/>
+        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="stylesheet" href="https://use.typekit.net/rix4tuh.css">
+        <script src="jq.js"></script>
+        <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+        <style>
+            h1{
+                margin-bottom: -5px;
+                margin-top: 50px;
+            }
+
+            a h1:hover{
+                letter-spacing: 2px;
+                text-decoration: underline;
+                text-decoration-color: blueviolet;
+            }
+
+            h2 a{
+                color: rgb(144, 241, 117);
+            }
+
+            h2 a:hover{
+                letter-spacing: 2px;
+                color: rgb(193, 241, 180);
+            }
+
+            hr{
+                margin-bottom: 25px;
+            }
+
+            #landing{
+                height: 100%;
+                width: 100%;
+                margin: auto;
+            }
+
+            #logo-button{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 300px;
+                z-index: 3;
+                transition-duration: 1s;
+                opacity: 1;
+            }
+
+            #logo-button:hover{
+                opacity: 0.3;
+                cursor: pointer;
+            }
+
+            /* #logo{
+                width:60%;
+            } */
+
+            .flyer{
+                width: 300px;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                cursor: pointer;
+                margin: auto;
+            }
+
+            .flyer-0{
+                position: absolute;
+                top: 8%;
+                left: 8%;
+                transform: rotate(-13deg);
+                z-index: 1;
+            }
+
+            .flyer-1{
+                position: absolute;
+                top: 55%;
+                left: 5%;
+                transform: rotate(-10deg);
+                z-index: 1;
+            }
+
+            .flyer-2{
+                position: absolute;
+                top: 10%;
+                left: 34%;
+                transform: rotate(5deg);
+                z-index: 1;
+            }
+
+            .flyer-3{
+                position: absolute;
+                top: 15%;
+                right: 14%;
+                transform: rotate(15deg);
+            }
+
+            .flyer-4{
+                position: absolute;
+                top: 5%;
+                right: 5%;
+                transform: rotate(3deg);
+                z-index: -1;
+            }
+
+            .flyer-5{
+                position: absolute;
+                top: 6%;
+                left: 24%;
+                transform: rotate(5deg);
+            }
+
+            .flyer-6{
+                position: absolute;
+                bottom: 7%;
+                right: 18%;
+                transform: rotate(-16deg);
+                z-index: 2;
+            }
+
+            .flyer-7{
+                position: absolute;
+                top: 5%;
+                left: 40%;
+                transform: rotate(-12deg);
+            }
+
+            .flyer-8{
+                position: absolute;
+                top: 15%;
+                left: 52%;
+                transform: rotate(-1deg);
+            }
+
+            .flyer-9{
+                position: absolute;
+                bottom: 15%;
+                right: 7%;
+                transform: rotate(-3deg);
+            }
+
+            .flyer-10{
+                position: absolute;
+                bottom: 10%;
+                left: 28%;
+                transform: rotate(-8deg);
+            }
+
+            .flyer-11{
+                position: absolute;
+                bottom: 11%;
+                left: 15%;
+                transform: rotate(3deg);
+            }
+
+            #flyer-0{
+                position: absolute;
+                top: 10%;
+                left: 34%;
+                transform: rotate(13deg);
+                z-index: 2;
+            }
+
+            #flyer-1{
+                position: absolute;
+                top: 20%;
+                left: 20%;
+                transform: rotate(10deg);
+            }
+
+            #flyer-2{
+                position: absolute;
+                top: 60%;
+                left: 40%;
+                transform: rotate(5deg);
+                z-index: 2;
+            }
+
+            #flyer-3{
+                position: absolute;
+                top: 40%;
+                right: 30%;
+                transform: rotate(15deg);
+            }
+
+            #flyer-4{
+                position: absolute;
+                top: 55%;
+                right: 25%;
+                transform: rotate(3deg);
+                z-index: -1;
+            }
+
+            #flyer-5{
+                position: absolute;
+                top: 8%;
+                right: 18%;
+                transform: rotate(5deg);
+            }
+
+            #flyer-6{
+                position: absolute;
+                top: 55%;
+                left: 27%;
+                transform: rotate(-6deg);
+                z-index: 1;
+            }
+
+            #flyer-7{
+                position: absolute;
+                top: 7%;
+                left: 50%;
+                transform: rotate(-12deg);
+                z-index: 2;
+            }
+
+            #flyer-8{
+                position: absolute;
+                top: 5%;
+                left: 28%;
+                transform: rotate(-1deg);
+            }
+
+            #flyer-9{
+                position: absolute;
+                top: 20%;
+                right: 26%;
+                transform: rotate(-3deg);
+                z-index: 2;
+            }
+
+            #flyer-10{
+                position: absolute;
+                top: 45%;
+                right: 21%;
+                transform: rotate(-8deg);
+                z-index: 2;
+            }
+
+            #flyer-11{
+                position: absolute;
+                top: 40%;
+                left: 22%;
+                transform: rotate(3deg);
+            }
+
+            #endbar{
+                height: 100px;
+                padding: 2%;
+                background-color: rgb(14, 49, 90);
+            }
+
+            .space{
+                margin-right: 20px;
+                float: left;
+            }
+
+            #navbar{
+                padding: 5% 5% 1% 5%
+            }
+
+            #navholder{
+                display:flex;
+                flex-direction:row;
+                width:90%;
+                justify-content:space-between;         
+            }
+
+           
+
+            @media screen and (max-width:800px) {
+            #navholder{
+                flex-direction:column;
+                /* justify-content: space-around; */
+                
+            }
+            #header{
+                margin-top:50px;
+                margin-bottom:5%;
+                flex-direction:column;
+                height:auto;
+                justify-content: space-around;
+            }
+            .button{
+                padding:3%;
+                font-size:.8em;
+                width:90%;
+            }
+            #logo{
+                margin-bottom:20%;
+            }
+        }
+
+        </style>
+    </head>
+
+    <body>
+        <div id="navbar">
+            <div id="header">
+                <div id="navlogo">
+                    <img id="logo" src="sslogo-small.png">
+                </div>
+
+                <div id="navholder">
+                    <!--replace the links!!-->
+                    <a class="navitems" href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/home%20page-acad275.html">Home</a>
+                    <a class="navitems"href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/about%20page.html">About</a>
+                    <a class="navitems"href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/listen%20page.html">Calendar</a>
+                    <a class="navitems"href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/collabs%20page.html">Map</a>
+                    <a class="navitems"href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/collabs%20page.html">Submit</a>
+                    <a class="navitems"href="http://webdev.iyaclasses.com/~jdyoung/acad275/personal%20site:%20final/collabs%20page.html">Contact</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="landing">
+            <img src="socalstages.png" id="logo-button">
+            <img src="flyer-0.png" class="flyer" id="flyer-0" alt="Conquest 2022 - Mura Musa">
+            <img src="flyer-1.png" class="flyer" id="flyer-1" alt="Surf Haus x 29th St">
+            <img src="flyer-2.jpg" class="flyer" id="flyer-2" alt="Cup of Troy x 29th St">
+            <img src="flyer-3.jpg" class="flyer" id="flyer-3" alt="29th St">
+            <img src="flyer-4.jpg" class="flyer" id="flyer-4" alt="Amplify x KXSC">
+            <img src="flyer-5.jpg" class="flyer" id="flyer-5" alt="Conquest 2021 - Kenny Beats">
+            <img src="flyer-6.jpg" class="flyer" id="flyer-6" alt="Springfest 2022">
+            <img src="flyer-7.jpg" class="flyer" id="flyer-7" alt="Mr. Zog & Mehki Clay">
+            <img src="flyer-8.jpg" class="flyer" id="flyer-8" alt="LiveTwoCreate x 29th St">
+            <img src="flyer-9.jpg" class="flyer" id="flyer-9" alt="Student Showcase">
+            <img src="flyer-10.jpg" class="flyer" id="flyer-10" alt="Welcome Back Concert 2022">
+            <img src="flyer-11.jpg" class="flyer" id="flyer-11" alt="Synthesia">
+            <br>
+        </div>
+
+        <!-- next part: list view -->
+        <div id="list-view" style="padding: 0% 5% 5% 5%; margin-bottom: 1%;">
+            <div>
+                <a href="# LINK TO LIST VIEW MAP PAGE"><h1 class="title">UPCOMING CONCERTS ✌︎</h1></a>
+            </div>
+            <div>
+                <h1>CONQUEST 2022</h1>
+                <p>
+                    <h2><strong><a href="https://www.instagram.com/uscconcerts/?hl=en">@uscconcerts</a></strong></h2>
+                </p><hr>
+                <img src="flyer-0.png" class="flyer space">
+                <div>
+                    <h3>November 17th</h3>
+                    <p>McCarthy Quad</p>
+                    <p>Doors Open 5:00 PM | Music Starts 8:30 PM</p>
+                </div>
+            </div><br style="clear:both;">
+
+            <div>
+                <h1>LIVE2 [SHOWCASE] #3 featuring: 12 AM and King Mala</h1>
+                <p>
+                    <!-- <em>Presented by 29th St Productions</em> -->
+                    <h2><strong><a href="https://www.instagram.com/29thst_productions/">@29thst_productions</a></strong></h2>
+                </p><hr>
+                <img src="flyer-8.jpg" class="flyer space">
+                <div>
+                    <h3>November 5th</h3>
+                    <p>Address: 1143 W 29th St</p>
+                    <p>Doors Open 8:30 PM</p>
+                    <p>Tickets: Presale - $12 or $15 at the door</p>
+                </div>
+            </div><br style="clear:both;">
+        </div>
+
+        <!-- next part: calendar view -->
+        <div id="calender-view" style="padding: 5%;">
+            <div>
+                <a href="# LINK TO CALENDAR PAGE"><h1 class="title">CALENDAR ✌︎</h1></a>
+            </div>
+            <div><p>INSERT CALENDAR</p></div>
+        </div>
+
+        <script>
+            var on = function(){
+                $("#flyer-0").animate({"left":"20%","top":"10%"},1000);
+                $("#flyer-1").animate({"left":"15%","top":"50%"},1000);
+                $("#flyer-2").animate({"left":"5%","top":"16%"},1000);
+                $("#flyer-3").animate({"left":"54%","top":"7%"},1000);
+                $("#flyer-4").animate({"left":"80%","top":"39%"},1000);
+                $("#flyer-5").animate({"left":"42%","top":"38%"},1000);
+                $("#flyer-6").animate({"left":"2%","top":"48%"},1000);
+                $("#flyer-7").animate({"left":"74%","top":"7%"},1000);
+                $("#flyer-8").animate({"left":"63%","top":"25%"},1000);
+                $("#flyer-9").animate({"left":"70%","top":"42%"},1000);
+                $("#flyer-10").animate({"left":"5%","top":"47%"},1000);
+                $("#flyer-11").animate({"left":"38%","top":"4%"},1000);
+            }
+
+            var off = function(){
+                // $("#music").trigger("play").prop("volume", 0.6);
+                // REVERSE OF HOVER EFFECT BACK TO NORMAL
+    
+                $("#flyer-0").animate({"left":"34%","top":"30%"},1000);
+                $("#flyer-1").animate({"left":"20%","top":"20%"},1000);
+                $("#flyer-2").animate({"left":"34%","top":"49%"},1000);
+                $("#flyer-3").animate({"left":"40%","top":"50%"},1000);
+                $("#flyer-4").animate({"left":"2%","top":"0%"},1000);
+                $("#flyer-5").animate({"left":"18%","top":"8%"},1000);
+                $("#flyer-6").animate({"left":"25%","top":"52%"},1000);
+                $("#flyer-7").animate({"left":"50%","top":"7%"},1000);
+                $("#flyer-8").animate({"left":"28%","top":"5%"},1000);
+                $("#flyer-9").animate({"left":"46%","top":"20%"},1000);
+                $("#flyer-10").animate({"left":"15%","top":"5%"},1000);
+                $("#flyer-11").animate({"left":"50%","top":"45%"},1000);
+                
+            }
+
+            var click = function(){
+                $("#flyer-0").addClass("flyer-0")
+                .animate({"left":"55%","top":"50%"},1000)
+                .delay(200)
+                .animate({"left":"8%", "top":"8%"},1000);
+
+                $("#flyer-1").addClass("flyer-1")
+                .animate({"left":"5%", "top":"30%"},1000)
+                .delay(200)
+                .animate({"left":"5%", "top":"55%", "transform":"rotate(13deg)"},1000);
+
+                $("#flyer-2").addClass("flyer-2").
+                animate({"left":"9%", "top":"68%"},1000)
+                .delay(200)
+                .animate({"left":"34%", "top":"10%"},1000);
+
+                $("#flyer-3").addClass("flyer-3").animate({"left":"5%", "top":"30%", "transform":"rotate(10deg)"},1000)
+                .delay(200)
+                .animate({"right":"8%", "bottom":"8%", "transform":"rotate(13deg)"},1000);
+
+                $("#flyer-4").addClass("flyer-4").animate({"left":"30%", "top":"22%", "transform":"rotate(10deg)"},1000)
+                .delay(200)
+                .animate({"right":"8%", "bottom":"8%", "transform":"rotate(13deg)"},1000);
+               
+                $("#flyer-5").addClass("flyer-5").animate({"left":"52%", "top":"33%", "transform":"rotate(10deg)"},1000)
+                .delay(200)
+                .animate({"right":"8%", "bottom":"8%", "transform":"rotate(13deg)"},1000);
+               
+                $("#flyer-6").addClass("flyer-6").animate({"left":"30%", "top":"17%", "transform":"rotate(10deg)"},1000)
+                .delay(200)
+                .animate({"right":"8%", "top":"8%", "transform":"rotate(13deg)"},1000);
+               
+                $("#flyer-7").addClass("flyer-7").animate({"left":"26%", "top":"44%", "transform":"rotate(10deg)"},1000)
+                .delay(200)
+                .animate({"right":"8%", "bottom":"8%", "transform":"rotate(13deg)"},1000);
+               
+                $("#flyer-8").addClass("flyer-8").animate({"left":"20%", "top":"30%", "transform":"rotate(10deg)"},1000)
+                .delay(200)
+                .animate({"right":"8%", "bottom":"8%", "transform":"rotate(13deg)"},1000);
+               
+                $("#flyer-9").addClass("flyer-9").animate({"left":"10%", "top":"60%", "transform":"rotate(10deg)"},1000)
+                .delay(200)
+                .animate({"right":"8%", "top":"8%", "transform":"rotate(13deg)"},1000);
+               
+                $("#flyer-10").addClass("flyer-10").animate({"left":"62%", "top":"10%", "transform":"rotate(10deg)"},1000)
+                .delay(200)
+                .animate({"left":"18%", "top":"38%", "transform":"rotate(13deg)"},1000);
+               
+                $("#flyer-11").addClass("flyer-11").animate({"left":"45%", "top":"13%", "transform":"rotate(10deg)"},1000)
+                .delay(200)
+                .animate({"right":"8%", "bottom":"8%", "transform":"rotate(13deg)"},1000);
+            }
+            
+            $(document).ready(function(){
+                $("#navlogo").hide();
+                $("#navholder").hide();
+                
+                $("#logo-button").on("mouseover", function(){
+                    on();
+                });
+
+                $("#logo-button").on("mouseout", function(){
+                    off();
+                });
+
+                $("#logo-button").on("click", function(){
+                    click();
+                    $("#logo-button").hide();
+                    $("#landing").hide(4000);
+                    $("#navlogo").show(3000);
+                    $("#navholder").show(3000);
+                })
+            });
+    
+        </script>
+    </body>
+</html>
