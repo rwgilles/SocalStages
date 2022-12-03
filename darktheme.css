@@ -1,0 +1,31 @@
+body{
+    color: white;
+    background-color: black;
+}
+.day{
+    border: solid white .5px;
+}
+.day:hover{
+    background-color: white;
+    color: black;
+}
+.snip{
+    background-color: black;
+    border: white 2px solid;
+}
+.snip h1{
+    color: white;
+}
+.snip h2{
+    color: white;
+}
+.snip p{
+    color: white;
+}
+
+.pagetitle{
+    color:white;
+}
+.navitems{
+    color:white;
+}
