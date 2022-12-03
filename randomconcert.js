@@ -4,16 +4,16 @@ var names = new Array;
 var ingredients = new Array; 
 var recipes = new Array; 
 
-images[0] = "synesthesia.jpeg"; 
+images[0] = "synesthesia.jpg"; 
 	names[0] = "Synesthesia"; 
 	
-images[1] = "springfest.jpeg"; 
+images[1] = "springfest.jpg"; 
 	names[1] = "SpringFest"
 	
-images[2] = "houseshow.jpeg"; 
+images[2] = "houseshow.jpg"; 
 	names[2] = "Houseshow"
 	
-images[3] = "kingmala.jpeg"; 
+images[3] = "kingmala.jpg"; 
 	names[3] = "King Mala"
 	
 

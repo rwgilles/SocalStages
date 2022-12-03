@@ -6,6 +6,7 @@
     <script src="jquery.js"></script>
     <script src="randomconcert.js"></script>
     <script src="jquery-3.6.1.min.js"></script>
+    
 
     <title>Random Concert picker</title>
     <style>
@@ -57,10 +58,13 @@
         #galleryholder{
             display: flex;
             flex-direction: row;
-            width: 80%;
-            margin-left: auto; margin-right: auto;
+            width: 60%;
+            height:auto;
+            justify-content: flex-start;
+            /*margin-left: auto; 
+            margin-right: auto;
             text-align: center;
-            margin-top: 2%;
+            margin-top: 2%;*/
         }
 
        #contenttext{
@@ -78,6 +82,16 @@
                 flex-direction:row;
                 width:90%;
                 justify-content:space-between;         
+            }
+
+            @media screen and (max-width:1200px) {
+                #main-photo img{
+                    width:10%;
+                }
+                #galleryholder{
+                    width:80%;
+                    justify-content: space-between;
+                }
             }
 
             @media screen and (max-width:800px) {
@@ -100,6 +114,14 @@
             }
             #logo{
                 margin-bottom:20%;
+            }
+            #galleryholder{
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            #random-gallery-thumbs{
+                flex-direction: row;
+                margin-bottom:5%;
             }
         }
 
@@ -131,20 +153,14 @@
     <br>
 
     <!-- content-->
-    <div id="contenttext">
+    <div id="margins">
         <div >
             <h2>No Plans? Find your next move here!</h2>
             <button id="generate">Generate!</button>
         </div>
-        <br>
+        <br><br>
         <div id="galleryholder">
             <!-- start of main -->
-            <div id="random-gallery-main">
-                <div id="main-photo">
-                    <img style="width:500px" src="generateconcert.png">
-                </div> 
-            </div> 
-
             <div id="random-gallery-thumbs">
                 <script>
                     for(i = 0; i < 4; i++){
@@ -153,6 +169,13 @@
                     }
                     </script>
             </div> 
+            <div id="random-gallery-main">
+                <div id="main-photo">
+                    <img style="width:500px" src="generateconcert.png">
+                </div> 
+            </div> 
+
+           
         </div>
 
     </div>
